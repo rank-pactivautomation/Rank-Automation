@@ -42,7 +42,6 @@ public class UploadSheetStepDefinition extends TestDataUtils {
 
 	TestResultsUtils testResultUtils = new TestResultsUtils();
 	DCTUtils dc = new DCTUtils();
-	PactivLogin PactivLogin = new PactivLogin();
 
 	@When("^User Clicks on expand icon for Line (\\d+) on plant view$")
 	public void user_Clicks_on_expand_icon_for_Line_on_plant_view(int arg1) throws Throwable {

@@ -30,7 +30,6 @@ public class LineViewStepDefinition extends TestDataUtils {
 	private static final Logger LOG = LoggerFactory.getLogger(DriverConfig.class);
 
 	TestResultsUtils testResultUtils = new TestResultsUtils();
-	PactivLogin PactivLogin = new PactivLogin();
 
 	@When("^User verify the assets in the Line view$")
 	public void user_verify_the_assets_in_the_Line_view() throws Throwable {

@@ -1,11 +1,15 @@
-browser_name=chrome
+browser_name=Chrome
 #browser_name=firefox
 #browser_name=edge
 #browser_name=safari
 #browser_name=ie
 
 
-#APPURL=https://bridgeviewfaiqa.pactiv.com:8443/Thingworx/FormLogin/Pactiv?eraseCache=true
-STAGURL=https://bridgeviewfaistaging.pactiv.com:8443/Thingworx/FormLogin/Pactiv?eraseCache=true
-APPURL=http://10.0.9.65:8080/Thingworx/FormLogin/Pactiv
-DMGURL=http://10.0.9.65:8080/Thingworx/FormLogin/Pactiv-DMG
+
+
+APPURL=https://bridgeviewfaiqa.pactiv.com:8443/Thingworx/FormLogin/Pactiv?eraseCache=true
+#STAGURL=
+
+MOORESVILLE_QA=https://bridgeviewfaiqa.pactiv.com:8443/Thingworx/FormLogin/Pactiv?eraseCache=true
+MOORESVILLE_STAGING=http://10.65.84.18:9080/Thingworx/FormLogin/Mooresville
+

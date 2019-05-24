@@ -1,33 +1,36 @@
 Feature: LoginAction
 
-  Background: Launch the Browser
-    Given User launches the Pactiv application
+  #Background: Launch the Browser
+    #Given User launches the Pactiv application
 
- @DummyTest1
+	@SmokeTests
   Scenario Outline: Successful log into Pactiv application with Valid Credentials
-    And User enters Username "<username>" and Password "<password>" 
+    Given User launches the Pactiv application 
+    And User enters Username "<username>" and Password "<password>"  
     Then User Clicks on Submit button
-    
-    Examples: 
-      | username   | password   |
-      | username_1 | password_1 |
-      | username_2 | password_2 |
-      #| username_3 | password_3 |
-      #| username_4 | password_4 |
-      #| username_5 | password_5 |
+    Then User should logout successfully
 
-  @RegressionTest
+    Examples: 
+      | username   | password   | 
+      | username_1 | password_1 | 
+      | username_2 | password_2 | 
+      | username_3 | password_3 | 
+      | username_4 | password_4 | 
+      | username_5 | password_5 | 
+
+ 	@SmokeTests
   Scenario Outline: User logins to the application with Incorrect Credentials
-    Given User enters Username "<username>" and Password "<password>" 
+    Given User launches the Pactiv application
+    And User enters Username "<username>" and Password "<password>" 
     Then User Clicks on Submit button
     Then User should validate the error message
 
     Examples: 
       | username    | password    |
       | username_1  | password_1  |
-      #| username_2  | password_2  |
-      #| username_3  | password_3  |
-      #| username_4  | password_4  |
+      | username_2  | password_2  |
+      | username_3  | password_3  |
+      | username_4  | password_4  |
       #| username_5  | password_5  |
       #| username_6  | password_6  |
       #| username_7  | password_7  |

@@ -1,6 +1,7 @@
 USERNAME_FIELD=//input[contains(@name,'thingworx-form-userid')]
 PASSWORD_FIELD=//input[contains(@name,'thingworx-form-password')]
 SUBMIT_BUTTON=//input[contains(@value,'Submit')]
+
 ERROR_MESSAGE=//p[contains(text(),'Credentials do not match a valid username-password combination for this Organization. Try again.')]
 LOGOUT_BUTTON=//button[contains(@class,'button-element textsize-normal')]
 BRIDGEVIEW_TEXT=//span[contains(text(),'Bridgeview Plant View')]
@@ -70,6 +71,19 @@ FLOATER_TEXT=//div[contains(@class,'line-selected')]//p[contains(text(),'Floater
 FLOATER1_TEXT=//div[contains(@class,'line-selected')]//p[contains(text(),'Venkatesh Koneri')]
 FLOATER2_TEXT=//div[contains(@class,'line-selected')]//p[contains(text(),'skaloty')]
 PLANTVIEW_LINEDISCONNECTED=//p[contains(text(),'Line Disconnected')]
+PRODUCTION_DOWNLOAD_REPORT=//span[contains(text(),'Download Scrapped Rows Report ')]
+DOWNLOAD_REPORT=(//input[contains(@value,'Download')])[2]
+PRODUCTION_REPORT=//span[contains(text(),'Download Production Tracking Report')]
+TIME_DROPDOWN=//*[@id="from1"]
+REPORT_DATE= //*[@id="runtime"]/div[15]/div[2]/table[2]/tbody/tr[1]/td[4]/div
+PROD_DOWNLOAD=(//input[contains(@value,'Download')])[1]
+CLOSE=//*[@id="root_pagemashupcontainer-6_navigation-24-popup"]/div[1]/span[2]
+SCRAPPED_TIME=//*[@id="from1"]
+EOL_TEXT=//span[contains(text(),'Choose Line for the End of Line screen')]
+EOL_LINES=//button[contains(@class,'button-element textsize-2xl')]/span[3]
+EOL_OEE_TEST=//div[contains(text(),'OEE')]
+EOL_DOWNTIME_TOTAL=//div[contains(text(),'Total Downtime')]
+EOL_FLOATER_TEXT=//div[contains(text(),'Floater')]
 PLANTNAME_TEXT=plant-name 
 LINE_NUMBER_COUNT=//*[@data-linenumber]
 SHIFT_COUNT=//*[@data-start-time]

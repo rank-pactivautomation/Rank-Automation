@@ -1,0 +1,23 @@
+TABLE_EOHOUR=//div[contains(text(),'End of Hour')]
+
+TABLE_PRODNAME=//div[contains(text(),'Product Name')]
+
+TABLE_GOLDENCASES=//div[contains(text(),'Golden Hour Cases')]
+
+TABLE_EXPCASES=//div[contains(text(),'Expected Cases')]
+
+TABLE_ACTUAL=//div[contains(text(),'Actual Cases')]
+
+TABLE_TARGETCPM=//div[contains(text(),'Target CPM')]
+
+TABLE_ACTCPM=//div[contains(text(),'Actual CPM')]
+TABLE_SCRAP=//div[contains(text(),'% of Table Scrapping')]
+
+
+TABLE_DOWNTIME=//div[contains(text(),'Downtime Reasons')]
+TABLE_COMMENTS=//div[contains(text(),'Comments')]
+LINE_TEXT=//span[contains(@class,'label-text textsize-36px')]
+LOGOUT=//span[contains(text(),'LOG OUT')]
+
+
+

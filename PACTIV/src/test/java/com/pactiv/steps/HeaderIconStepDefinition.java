@@ -20,7 +20,6 @@ public class HeaderIconStepDefinition extends TestDataUtils{
 	private static final Logger LOG = LoggerFactory.getLogger(DriverConfig.class);
 
 	TestResultsUtils testResultUtils = new TestResultsUtils();
-	PactivLogin PactivLogin = new PactivLogin();
 
 	@Then("^User verify the title on Dashboard Page$")
 	public void user_verify_the_title_on_Dashboard_Page() throws Throwable {

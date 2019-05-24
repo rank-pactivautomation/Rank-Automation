@@ -249,7 +249,7 @@ private static ThreadLocal<Boolean> isGalenScenario = new ThreadLocal<Boolean>()
 	public static String getScenarioID() {
 		return scenarioID.get();
 	}
-
+	
 	/**
 	 * Sets the scenario ID.
 	 *

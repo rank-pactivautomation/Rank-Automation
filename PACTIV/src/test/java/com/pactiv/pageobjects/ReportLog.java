@@ -27,5 +27,4 @@ public class ReportLog {
 	public static By reportlog_selectlevel2= By.xpath(repository.getProperty("REPORTLOG_SELECTLEVEL2"));
 	public static By reportlog_selectlevel3= By.xpath(repository.getProperty("REPORTLOG_SELECTLEVEL3"));
 	public static By reportlog_save= By.xpath(repository.getProperty("REPORTLOG_SAVE"));
-	public final By reportLogIconDashboard = By.xpath(repository.getProperty("REPORTLOG_ICON_DASHBOARD"));
 }

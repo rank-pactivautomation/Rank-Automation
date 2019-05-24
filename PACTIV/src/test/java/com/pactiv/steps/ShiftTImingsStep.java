@@ -17,7 +17,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import cucumber.api.java.en.Then;
 
-public class ShiftTImingsStep {
+public class ShiftTimingsStep {
 
 	/** The usablemethods. */
 	DriverUtilsImpl usablemethods = new DriverUtilsImpl();
@@ -45,10 +45,10 @@ public class ShiftTImingsStep {
 		String[] shiftTimings = LocalTestDataManager.getTestDataHashMap().get(shift).split(", ");
 		boolean status = true;
 		List<String> timingsStringApp = new ArrayList<String>();
-		for (WebElement timingsApp : shiftTimingsApp) {
-			timingsStringApp.add(usablemethods.getWebElementText(timingsApp));
-			LOG.info("Timings in App ::" + timingsApp);
-		}
+//		for (WebElement timingsApp : shiftTimingsApp) {
+//			timingsStringApp.add(usablemethods.getWebElementText(timingsApp));
+//			LOG.info("Timings in App ::" + timingsApp);
+//		}
 		for (String timings : shiftTimings)
 			if (!timingsStringApp.contains(timings))
 				status = false;

@@ -18,13 +18,10 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,6 +31,7 @@ import com.pactiv.exception.PactivException;
 import com.pactiv.utils.DCTUtils;
 import com.pactiv.utils.TestResultsUtils;
 import com.relevantcodes.extentreports.LogStatus;
+
 
 /**
  * The Class DriverUtilsImpl.
@@ -73,16 +71,16 @@ public class DriverUtilsImpl implements DriverUtils {
 			e.printStackTrace();
 		}
 		return true;
-
-		/*
-		 * try { LocalDriverManager.getDriver().manage().timeouts().implicitlyWait(5000,
-		 * TimeUnit.MILLISECONDS); return
-		 * (LocalDriverManager.getDriver().getTitle().contains(pageTitle)); } catch
-		 * (Exception exception) { throw new PactivException(exception); }
-		 */
+		
+		/*try {
+			LocalDriverManager.getDriver().manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+			return (LocalDriverManager.getDriver().getTitle().contains(pageTitle));
+		} catch (Exception exception) {
+			throw new PactivException(exception);
+		}*/
 	}
 
-	/*
+	/*selec
 	 * (non-Javadoc)
 	 *
 	 * @see com.avepoint.util.DriverUtils#openPage(java.lang.String)
@@ -128,35 +126,40 @@ public class DriverUtilsImpl implements DriverUtils {
 	 * Send text keys to the element that finds by cssSelector. It shortens
 	 * "LocalDriverManager.getDriver().findElement(By.cssSelector()).sendKeys()".
 	 *
-	 * @param idSelector the id selector
-	 * @param text       the text
+	 * @param idSelector
+	 *            the id selector
+	 * @param text
+	 *            the text
 	 * @return true, if successful
-	 * @throws PactivException the avepoint exception
+	 * @throws PactivException
+	 *             the avepoint exception
 	 */
 	@Override
 	public boolean sendText(By idSelector, String text) throws PactivException {
-		try {
-			LOG.info("In sendText():: Entering " + text + " in " + idSelector);
-			WebElement element = getWebElement(idSelector);
-			waitUntilElementClickable(element);
-			if (element.isEnabled()) {
-				element.clear();
-				element.sendKeys(text);
-				return true;
-			} else {
+		try{
+			LocalDriverManager.getDriver().manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+			if(LocalDriverManager.getDriver().findElement(idSelector).isEnabled()){
+			LocalDriverManager.getDriver().findElement(idSelector).clear();
+			LocalDriverManager.getDriver().findElement(idSelector).sendKeys(text);
+			return true;
+			}
+			else{
 				return false;
 			}
-		} catch (Throwable t) {
+		}catch(Throwable t){
 			LOG.error("Printing error: " + t.getMessage());
 			throw new PactivException("Send Text error");
 		}
 	}
+	
+	
 
 	/**
 	 * Send text keys to the element that finds by cssSelector. It shortens
 	 * "LocalDriverManager.getDriver().findElement(By.cssSelector()).sendKeys()".
 	 *
-	 * @param by the by
+	 * @param by
+	 *            the by
 	 * @return true, if is element present
 	 * @throws AvepointException
 	 */
@@ -181,9 +184,11 @@ public class DriverUtilsImpl implements DriverUtils {
 	/**
 	 * Number of elements present.
 	 *
-	 * @param by the by
+	 * @param by
+	 *            the by
 	 * @return the int
-	 * @throws PactivException the avepoint exception
+	 * @throws PactivException
+	 *             the avepoint exception
 	 */
 	@Override
 	public int numberOfElementsPresent(By by) throws PactivException {
@@ -197,12 +202,14 @@ public class DriverUtilsImpl implements DriverUtils {
 
 	/**
 	 * Send text keys to the element that finds by cssSelector. It shortens
-	 * "LocalDriverManager.getDriver().findElement if the element is not present on
-	 * the page then returns true
+	 * "LocalDriverManager.getDriver().findElement if the element is not present
+	 * on the page then returns true
 	 *
-	 * @param by the by
+	 * @param by
+	 *            the by
 	 * @return true, if is element not present
-	 * @throws AvepointException the avepoint exception
+	 * @throws AvepointException
+	 *             the avepoint exception
 	 */
 
 	/** Is the Element in page. */
@@ -226,9 +233,11 @@ public class DriverUtilsImpl implements DriverUtils {
 	/**
 	 * Is the Element present in the DOM.
 	 *
-	 * @param _cssSelector element locater
+	 * @param _cssSelector
+	 *            element locater
 	 * @return WebElement
-	 * @throws PactivException the avepoint exception
+	 * @throws PactivException
+	 *             the avepoint exception
 	 */
 
 	@Override
@@ -246,9 +255,11 @@ public class DriverUtilsImpl implements DriverUtils {
 	/**
 	 * Checks if the element is in the DOM and displayed.
 	 *
-	 * @param by - selector to find the element
+	 * @param by
+	 *            - selector to find the element
 	 * @return true or false
-	 * @throws PactivException the avepoint exception
+	 * @throws PactivException
+	 *             the avepoint exception
 	 */
 	@Override
 	public boolean isElementPresentAndDisplayed(By by) throws PactivException {
@@ -264,13 +275,16 @@ public class DriverUtilsImpl implements DriverUtils {
 	 * Returns the first WebElement using the given method. It shortens
 	 * "LocalDriverManager.getDriver().findElement(By)".
 	 *
-	 * @param by element locater.
+	 * @param by
+	 *            element locater.
 	 * @return the first WebElement
-	 * @throws PactivException the avepoint exception
+	 * @throws PactivException
+	 *             the avepoint exception
 	 */
 	@Override
 	public WebElement getWebElement(By by) throws PactivException {
 		try {
+			LocalDriverManager.getDriver().manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
 			return LocalDriverManager.getDriver().findElement(by);
 		} catch (Exception exception) {
 			throw new PactivException(exception);
@@ -292,13 +306,12 @@ public class DriverUtilsImpl implements DriverUtils {
 	public List<WebElement> gGetLlist(By wElement) throws PactivException {
 
 		try {
-			WebDriverWait webDriverWait = new WebDriverWait(LocalDriverManager.getDriver(), 50);
-			webDriverWait.until(
-					ExpectedConditions.visibilityOfAllElements(LocalDriverManager.getDriver().findElements(wElement)));
+			LocalDriverManager.getDriver().manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
 			List<WebElement> strList = LocalDriverManager.getDriver().findElements(wElement);
 			return strList;
 
 		} catch (Exception exception) {
+
 			throw new PactivException(exception);
 		}
 
@@ -307,12 +320,14 @@ public class DriverUtilsImpl implements DriverUtils {
 	/**
 	 * Gets the web elements count.
 	 *
-	 * @param wElement the w element
+	 * @param wElement
+	 *            the w element
 	 * @return the web elements count
-	 * @throws PactivException the avepoint exception
+	 * @throws PactivException
+	 *             the avepoint exception
 	 */
 	public int getWebElementsCount(By wElement) throws PactivException {
-		addPageLoadTimeout();
+
 		try {
 			int count = LocalDriverManager.getDriver().findElements(wElement).size();
 			return count;
@@ -356,30 +371,34 @@ public class DriverUtilsImpl implements DriverUtils {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see com.avepoint.util.DriverUtils#gExplicitWait(org.openqa.selenium.By, int,
-	 * java.lang.String, java.lang.String)
+	 * @see
+	 * com.avepoint.util.DriverUtils#gExplicitWait(org.openqa.selenium.By,
+	 * int, java.lang.String, java.lang.String)
 	 */
 	/*
-	 * @Override public void gExplicitWait(By elementLocator, int maxTimeOut, String
-	 * strConditionMode, String strName) throws AvepointException {
+	 * @Override public void gExplicitWait(By elementLocator, int maxTimeOut,
+	 * String strConditionMode, String strName) throws AvepointException {
 	 *
 	 * try {
 	 *
 	 * conditionalWait mode =
 	 * conditionalWait.valueOf(strConditionMode.toUpperCase()); //
-	 * Reporter.log("'gExplicitWait' function called for "+ // strConditionMode);
+	 * Reporter.log("'gExplicitWait' function called for "+ //
+	 * strConditionMode);
 	 *
 	 * switch (mode) { case VISIBILITY: (new
 	 * WebDriverWait(LocalDriverManager.getDriver(), maxTimeOut))
-	 * .until(ExpectedConditions.visibilityOfElementLocated(elementLocator)); break;
+	 * .until(ExpectedConditions.visibilityOfElementLocated(elementLocator));
+	 * break;
 	 *
 	 * case INVISIBILITY: (new WebDriverWait(LocalDriverManager.getDriver(),
 	 * maxTimeOut))
 	 * .until(ExpectedConditions.invisibilityOfElementLocated(elementLocator));
 	 * break;
 	 *
-	 * case FRAME: // Reporter.log("gExplicitWait is called to wait for element :"+
-	 * // strName); (new WebDriverWait(LocalDriverManager.getDriver(), maxTimeOut))
+	 * case FRAME: //
+	 * Reporter.log("gExplicitWait is called to wait for element :"+ //
+	 * strName); (new WebDriverWait(LocalDriverManager.getDriver(), maxTimeOut))
 	 * .until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(strName)); new
 	 * WebDriverWait(LocalDriverManager.getDriver(), 10).until(
 	 * ExpectedConditions.visibilityOfElementLocated(By.xpath(
@@ -387,16 +406,17 @@ public class DriverUtilsImpl implements DriverUtils {
 	 *
 	 * case PRESENCE: (new WebDriverWait(LocalDriverManager.getDriver(),
 	 * maxTimeOut))
-	 * .until(ExpectedConditions.presenceOfElementLocated(elementLocator)); break;
+	 * .until(ExpectedConditions.presenceOfElementLocated(elementLocator));
+	 * break;
 	 *
 	 * case POPUPALERT: List<WebElement> popupElements =
 	 * LocalDriverManager.getDriver().findElements(elementLocator); int count =
 	 * popupElements.size(); if (count > 0) { (new
 	 * WebDriverWait(LocalDriverManager.getDriver(), maxTimeOut))
-	 * .until(ExpectedConditions.visibilityOfElementLocated(elementLocator)); for
-	 * (int j = 0; j < count; j++) { popupElements.get(j).click();
-	 * Thread.sleep(1500); } break; } } } catch (Exception exception) { throw new
-	 * AvepointException(exception); }
+	 * .until(ExpectedConditions.visibilityOfElementLocated(elementLocator));
+	 * for (int j = 0; j < count; j++) { popupElements.get(j).click();
+	 * Thread.sleep(1500); } break; } } } catch (Exception exception) { throw
+	 * new AvepointException(exception); }
 	 *
 	 * }
 	 */
@@ -408,7 +428,8 @@ public class DriverUtilsImpl implements DriverUtils {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see com.avepoint.util.DriverUtils#gElementFocus(org.openqa.selenium.By)
+	 * @see
+	 * com.avepoint.util.DriverUtils#gElementFocus(org.openqa.selenium.By)
 	 */
 	// 'Return Value : true/false
 	@Override
@@ -442,7 +463,8 @@ public class DriverUtilsImpl implements DriverUtils {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see com.avepoint.util.DriverUtils#gClickLinkOrButton(org.openqa.selenium.
+	 * @see
+	 * com.avepoint.util.DriverUtils#gClickLinkOrButton(org.openqa.selenium.
 	 * By, int)
 	 */
 	@Override
@@ -469,45 +491,49 @@ public class DriverUtilsImpl implements DriverUtils {
 	 */
 	/*
 	 * *************************************************************************
-	 * *********************************************** Function Name: click on any
-	 * element
+	 * *********************************************** Function Name: click on
+	 * any element
 	 *
 	 * Description : To perform click operation on button or link and etc
 	 */
 	@Override
 	public boolean gClick(By elementLocator) throws PactivException {
+		
 		try {
+			LocalDriverManager.getDriver().manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
 			LOG.info("in gclick ::{}", elementLocator);
-			if (getWebElement(elementLocator).isEnabled()) {
-				addPageLoadTimeout();
-				waitUntilElementClickable(getWebElement(elementLocator));
-				getWebElement(elementLocator).click();
+			if (LocalDriverManager.getDriver().findElement(elementLocator).isEnabled()) {
+				LocalDriverManager.getDriver().manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
+				LocalDriverManager.getDriver().findElement(elementLocator).click();
+				Thread.sleep(5000);
 				hitEscapeKeyForPopups();
 				return true;
 			} else {
 				LOG.info("Element is not enabled::{}", elementLocator);
 				return false;
 			}
-		} catch (Throwable t) {
+		} catch (Throwable t) {	
+			
 			LOG.error("Printing error : " + t.getMessage());
-//			String homescreenshot = takescreenshot("home page");
-//			TestResultsUtils.logger.log(LogStatus.FAIL, "Field is not clicked",
-//					TestResultsUtils.logger.addBase64ScreenShot(homescreenshot));
-			;
+			String homescreenshot=takescreenshot("home page");
+			TestResultsUtils.logger.log(LogStatus.FAIL, "Field is not clicked",TestResultsUtils.logger.addBase64ScreenShot(homescreenshot));;
 			throw new PactivException("gClick Exception");
-
+			
 		}
+		
+		
+		
 	}
-
 	public boolean sendData(By elementLocator, String text) throws PactivException {
-		try {
-			if (LocalDriverManager.getDriver().findElement(elementLocator).isEnabled()) {
-				LocalDriverManager.getDriver().findElement(elementLocator).sendKeys(text);
-				return true;
-			} else {
+		try{
+			if(LocalDriverManager.getDriver().findElement(elementLocator).isEnabled()) {
+			LocalDriverManager.getDriver().findElement(elementLocator).sendKeys(text);
+			return true;
+			}
+			else{
 				return false;
 			}
-		} catch (Throwable t) {
+		}catch(Throwable t){
 			LOG.error("Printing error: " + t.getMessage());
 			throw new PactivException("Send Text error");
 		}
@@ -515,8 +541,8 @@ public class DriverUtilsImpl implements DriverUtils {
 
 	/*
 	 * *************************************************************************
-	 * *********************************************** Function Name: click on any
-	 * element using javascript executor
+	 * *********************************************** Function Name: click on
+	 * any element using javascript executor
 	 *
 	 * Description : To perform click operation on button or link and etc
 	 */
@@ -540,10 +566,13 @@ public class DriverUtilsImpl implements DriverUtils {
 	/**
 	 * G click.
 	 *
-	 * @param elementLocator the element locator
-	 * @param text           the text
+	 * @param elementLocator
+	 *            the element locator
+	 * @param text
+	 *            the text
 	 * @return true, if successful
-	 * @throws PactivException the avepoint exception
+	 * @throws PactivException
+	 *             the avepoint exception
 	 */
 	public boolean gClick(By elementLocator, String text) throws PactivException {
 		try {
@@ -571,10 +600,13 @@ public class DriverUtilsImpl implements DriverUtils {
 	/**
 	 * J click.
 	 *
-	 * @param elementLocator the element locator
-	 * @param text           the text
+	 * @param elementLocator
+	 *            the element locator
+	 * @param text
+	 *            the text
 	 * @return true, if successful
-	 * @throws PactivException the avepoint exception
+	 * @throws PactivException
+	 *             the avepoint exception
 	 */
 	public boolean jClick(By elementLocator, String text) throws PactivException {
 		try {
@@ -639,7 +671,8 @@ public class DriverUtilsImpl implements DriverUtils {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see com.avepoint.util.DriverUtils#gRadioSelectValue(org.openqa.selenium.By,
+	 * @see
+	 * com.avepoint.util.DriverUtils#gRadioSelectValue(org.openqa.selenium.By,
 	 * java.lang.String)
 	 */
 	// 'Return Value : true
@@ -675,21 +708,23 @@ public class DriverUtilsImpl implements DriverUtils {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see com.avepoint.util.DriverUtils#gListGetValue(org.openqa.selenium.By)
+	 * @see
+	 * com.avepoint.util.DriverUtils#gListGetValue(org.openqa.selenium.By)
 	 */
 	// 'Return Value : strText - Value(Text) of the list box which is selected
 	@Override
 	public String gListGetValue(By strId) throws PactivException {
 		return URL;
-		/*
-		 * try { LocalDriverManager.getDriver().manage().timeouts().implicitlyWait(5000,
-		 * TimeUnit.MILLISECONDS); String strText = null; Select selectListBox = new
-		 * Select(LocalDriverManager.getDriver().findElement(strId)); strText =
-		 * selectListBox.getFirstSelectedOption().getText(); return strText; } catch
-		 * (Exception exception) {
-		 * 
-		 * throw new PactivException(exception); }
-		 */
+		/*try {
+			LocalDriverManager.getDriver().manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+			String strText = null;
+			Select selectListBox = new Select(LocalDriverManager.getDriver().findElement(strId));
+			strText = selectListBox.getFirstSelectedOption().getText();
+			return strText;
+		} catch (Exception exception) {
+
+			throw new PactivException(exception);
+		}*/
 	}
 
 	// '**************************************************************************************************************
@@ -699,7 +734,8 @@ public class DriverUtilsImpl implements DriverUtils {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see com.avepoint.util.DriverUtils#gRadioGetValue(org.openqa.selenium.By)
+	 * @see
+	 * com.avepoint.util.DriverUtils#gRadioGetValue(org.openqa.selenium.By)
 	 */
 	// 'Return Value : strText - Value of the Radiobutton(Ex: 0,1, etc..)
 	@Override
@@ -730,7 +766,8 @@ public class DriverUtilsImpl implements DriverUtils {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see com.avepoint.util.DriverUtils#gCheckBoxSelect(org.openqa.selenium.By,
+	 * @see
+	 * com.avepoint.util.DriverUtils#gCheckBoxSelect(org.openqa.selenium.By,
 	 * java.lang.String)
 	 */
 	// 'Return Value : boolean(true/false)
@@ -809,7 +846,8 @@ public class DriverUtilsImpl implements DriverUtils {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see com.avepoint.util.DriverUtils#gWebElementGetTexts(org.openqa.selenium.
+	 * @see
+	 * com.avepoint.util.DriverUtils#gWebElementGetTexts(org.openqa.selenium.
 	 * By, int)
 	 */
 	// 'Return Value : true/false
@@ -836,7 +874,8 @@ public class DriverUtilsImpl implements DriverUtils {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see com.avepoint.util.DriverUtils#gWebElementGetText(org.openqa.selenium.
+	 * @see
+	 * com.avepoint.util.DriverUtils#gWebElementGetText(org.openqa.selenium.
 	 * By)
 	 */
 	@Override
@@ -916,7 +955,8 @@ public class DriverUtilsImpl implements DriverUtils {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see com.avepoint.util.DriverUtils#gVerifyContainsText(java.lang.String,
+	 * @see
+	 * com.avepoint.util.DriverUtils#gVerifyContainsText(java.lang.String,
 	 * java.lang.String)
 	 */
 	@Override
@@ -942,7 +982,8 @@ public class DriverUtilsImpl implements DriverUtils {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see com.avepoint.util.DriverUtils#gVerifyAttributeValue(org.openqa.selenium
+	 * @see
+	 * com.avepoint.util.DriverUtils#gVerifyAttributeValue(org.openqa.selenium
 	 * .By, java.lang.String, java.lang.String)
 	 */
 	// TODO check
@@ -1072,21 +1113,28 @@ public class DriverUtilsImpl implements DriverUtils {
 	public boolean gSwitchFrame(String strFrameid, String strFrameType) throws PactivException {
 		return false;
 
-		/*
-		 * try { LocalDriverManager.getDriver().manage().timeouts().implicitlyWait(5000,
-		 * TimeUnit.MILLISECONDS); String srtUpperCase =
-		 * String.valueOf(strFrameType.toUpperCase()); switch (srtUpperCase) { case
-		 * "INT": // To handle if entered frame Id is number int typeInt =
-		 * Integer.parseInt(strFrameid);
-		 * LocalDriverManager.getDriver().switchTo().frame(typeInt); break; case
-		 * "STRING": // To handle if entered frame Id is string
-		 * LocalDriverManager.getDriver().switchTo().frame(strFrameid); break; case
-		 * "WEBELEMENT": // To handle if entered frame Id is webelement
-		 * LocalDriverManager.getDriver().switchTo().frame(strFrameid); break; case
-		 * "DEFAULT": // To switch default frame
-		 * LocalDriverManager.getDriver().switchTo().defaultContent(); break; } return
-		 * true; } catch (Exception exception) { throw new PactivException(exception); }
-		 */
+		/*try {
+			LocalDriverManager.getDriver().manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+			String srtUpperCase = String.valueOf(strFrameType.toUpperCase());
+			switch (srtUpperCase) {
+			case "INT": // To handle if entered frame Id is number
+				int typeInt = Integer.parseInt(strFrameid);
+				LocalDriverManager.getDriver().switchTo().frame(typeInt);
+				break;
+			case "STRING": // To handle if entered frame Id is string
+				LocalDriverManager.getDriver().switchTo().frame(strFrameid);
+				break;
+			case "WEBELEMENT": // To handle if entered frame Id is webelement
+				LocalDriverManager.getDriver().switchTo().frame(strFrameid);
+				break;
+			case "DEFAULT": // To switch default frame
+				LocalDriverManager.getDriver().switchTo().defaultContent();
+				break;
+			}
+			return true;
+		} catch (Exception exception) {
+			throw new PactivException(exception);
+		}*/
 
 	}
 
@@ -1136,7 +1184,8 @@ public class DriverUtilsImpl implements DriverUtils {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see com.avepoint.util.DriverUtils#gGetAttributeValue(org.openqa.selenium.
+	 * @see
+	 * com.avepoint.util.DriverUtils#gGetAttributeValue(org.openqa.selenium.
 	 * By, java.lang.String)
 	 */
 	// 'Return Value :
@@ -1150,7 +1199,8 @@ public class DriverUtilsImpl implements DriverUtils {
 				String strAttributeValue = LocalDriverManager.getDriver().findElement(webElement)
 						.getAttribute(strProperty);
 				/*
-				 * if(!strAppToolTip.trim().equalsIgnoreCase(strText)){ throw new Exception();
+				 * if(!strAppToolTip.trim().equalsIgnoreCase(strText)){ throw
+				 * new Exception();
 				 */
 				return strAttributeValue;
 			} else {
@@ -1200,7 +1250,8 @@ public class DriverUtilsImpl implements DriverUtils {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see com.avepoint.util.DriverUtils#gGetAllOptions(org.openqa.selenium.By)
+	 * @see
+	 * com.avepoint.util.DriverUtils#gGetAllOptions(org.openqa.selenium.By)
 	 */
 	// 'Return Value : true
 	@Override
@@ -1228,7 +1279,7 @@ public class DriverUtilsImpl implements DriverUtils {
 	 * @see com.avepoint.util.DriverUtils#gScrollPage(int, int)
 	 */
 	// 'Return Value :
-
+	
 	public void gScrollPageDown() throws PactivException {
 
 		try {
@@ -1236,37 +1287,37 @@ public class DriverUtilsImpl implements DriverUtils {
 			JavascriptExecutor jse = (JavascriptExecutor) LocalDriverManager.getDriver();
 			jse.executeScript("window.scrollBy(0,250)", "");
 			jse.executeScript("scroll(0, 250);");
-
+			
 		} catch (Exception exception) {
 
 			throw new PactivException(exception);
 		}
 	}
-
+	
 	// **************************************************************************************************************
-	// 'Function Name : gScrollPageUp
-	// 'Script Description : Scrolling the page down
-	// 'Input Parameters : None
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see com.avepoint.util.DriverUtils#gScrollPage(int, int)
-	 */
-	// 'Return Value :
+		// 'Function Name : gScrollPageUp
+		// 'Script Description : Scrolling the page down
+		// 'Input Parameters : None
+		/*
+		 * (non-Javadoc)
+		 *
+		 * @see com.avepoint.util.DriverUtils#gScrollPage(int, int)
+		 */
+		// 'Return Value :
+		
+		public void gScrollPageUp() throws PactivException {
 
-	public void gScrollPageUp() throws PactivException {
+			try {
+				LocalDriverManager.getDriver().manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+				JavascriptExecutor jse = (JavascriptExecutor) LocalDriverManager.getDriver();
+				jse.executeScript("window.scrollBy(0,-250)", "");
+				jse.executeScript("scroll(0, -250);");
+				
+			} catch (Exception exception) {
 
-		try {
-			LocalDriverManager.getDriver().manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
-			JavascriptExecutor jse = (JavascriptExecutor) LocalDriverManager.getDriver();
-			jse.executeScript("window.scrollBy(0,-250)", "");
-			jse.executeScript("scroll(0, -250);");
-
-		} catch (Exception exception) {
-
-			throw new PactivException(exception);
+				throw new PactivException(exception);
+			}
 		}
-	}
 
 	// ******************************************************************************************************************
 	// 'Function Name : gValidateTextAndReutrn
@@ -1277,7 +1328,8 @@ public class DriverUtilsImpl implements DriverUtils {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see com.avepoint.util.DriverUtils#gVerifyTextAndReturn(org.openqa.selenium.
+	 * @see
+	 * com.avepoint.util.DriverUtils#gVerifyTextAndReturn(org.openqa.selenium.
 	 * By, java.lang.String)
 	 */
 	// 'Return Value :
@@ -1357,13 +1409,14 @@ public class DriverUtilsImpl implements DriverUtils {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see com.avepoint.util.DriverUtils#gListOfValues(org.openqa.selenium.By)
+	 * @see
+	 * com.avepoint.util.DriverUtils#gListOfValues(org.openqa.selenium.By)
 	 */
 	/*
 	 * Function Name:gListOfValues
 	 *
-	 * Description: This will return the values of checkbox/radio buttons/links and
-	 * etc
+	 * Description: This will return the values of checkbox/radio buttons/links
+	 * and etc
 	 */
 	@Override
 	public List<String> gListOfValues(By elementLocator) throws PactivException {
@@ -1415,7 +1468,8 @@ public class DriverUtilsImpl implements DriverUtils {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see com.avepoint.util.DriverUtils#getHtmlTableData(org.openqa.selenium.By)
+	 * @see
+	 * com.avepoint.util.DriverUtils#getHtmlTableData(org.openqa.selenium.By)
 	 */
 	/*
 	 * Function Name: getHtmlTableData
@@ -1513,7 +1567,9 @@ public class DriverUtilsImpl implements DriverUtils {
 	 */
 	@Override
 	public String takescreenshot(String scenario) throws PactivException {
+		
 		try {
+			
 			String startedAt = "";
 			String screenshotPath = "";
 			// String[] s = DCTUtils.timeStamp().split(Constants.COLON);
@@ -1521,28 +1577,32 @@ public class DriverUtilsImpl implements DriverUtils {
 			s = s.replaceAll(":", " ");
 			startedAt = s.split("\\.")[0];
 			/*
-			 * LOG.info(Arrays.toString(s)); for (int i = 0; i < s.length - 1; i++) {
-			 * startedAt = startedAt + "-" + s[i]; }
+			 * LOG.info(Arrays.toString(s)); for (int i = 0; i < s.length - 1;
+			 * i++) { startedAt = startedAt + "-" + s[i]; }
 			 */
 
 			// startedAt = startedAt.substring(1, startedAt.length());
 			// startedAt = startedAt.replace(" ", Constants.UNDERSCORE);
-
+			if(LocalDriverManager.getDriver()!=null) {
 			File srcfile = ((TakesScreenshot) LocalDriverManager.getDriver()).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(srcfile,
-					new File(TestResultsUtils.screenshotDirectory + "\\sc-" + scenario + startedAt + ".png"));
+			FileUtils.copyFile(srcfile, new File(TestResultsUtils.screenshotDirectory + "\\sc-" + scenario + startedAt + ".png"));
 			screenshotPath = TestResultsUtils.screenshotDirectory + "\\sc-" + scenario + startedAt + ".png";
 			return screenshotPath;
-
+			}
 		} catch (IOException exception) {
 			throw new PactivException(exception);
 		}
+		return scenario;
+		
+	
+		
 	}
 
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see com.avepoint.applnlibrary.ReusableMethods#sendKeysAction(org.openqa.
+	 * @see
+	 * com.avepoint.applnlibrary.ReusableMethods#sendKeysAction(org.openqa.
 	 * selenium.Keys)
 	 *
 	 */
@@ -1560,8 +1620,8 @@ public class DriverUtilsImpl implements DriverUtils {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see com.avepoint.applnlibrary.ReusableMethods#addPageLoadTimeout() This
-	 * Method is to override the default pageload timeout of selenium
+	 * @see com.avepoint.applnlibrary.ReusableMethods#addPageLoadTimeout()
+	 * This Method is to override the default pageload timeout of selenium
 	 */
 	@Override
 	public void addPageLoadTimeout() {
@@ -1579,8 +1639,10 @@ public class DriverUtilsImpl implements DriverUtils {
 	/**
 	 * Builds the xpath.
 	 *
-	 * @param xPath the x path
-	 * @param text  the text
+	 * @param xPath
+	 *            the x path
+	 * @param text
+	 *            the text
 	 * @return the string
 	 */
 	public String buildXpath(String xPath, String text) {
@@ -1593,8 +1655,10 @@ public class DriverUtilsImpl implements DriverUtils {
 	/**
 	 * Builds the xpath.
 	 *
-	 * @param elemlocator the elemlocator
-	 * @param text        the text
+	 * @param elemlocator
+	 *            the elemlocator
+	 * @param text
+	 *            the text
 	 * @return the string
 	 */
 	public String buildXpath(By elemlocator, String text) {
@@ -1607,11 +1671,13 @@ public class DriverUtilsImpl implements DriverUtils {
 		return xPath;
 	}
 
+
+	
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see com.avepoint.applnlibrary.ReusableMethods#hitEscapeKeyForPopups() This
-	 * method is used to hit escape key for the Windows popup
+	 * @see com.avepoint.applnlibrary.ReusableMethods#hitEscapeKeyForPopups()
+	 * This method is used to hit escape key for the Windows popup
 	 */
 	@Override
 	public void hitEscapeKeyForPopups() {
@@ -1626,8 +1692,8 @@ public class DriverUtilsImpl implements DriverUtils {
 	}
 
 	/*
-	 * This methods performs an action on a particular element. Parameter passed are
-	 * : key like Enter and xpath of any element
+	 * This methods performs an action on a particular element. Parameter passed
+	 * are : key like Enter and xpath of any element
 	 */
 
 	public void sendKeysAction(Keys Key, By element) throws PactivException {
@@ -1716,85 +1782,5 @@ public class DriverUtilsImpl implements DriverUtils {
 
 	}
 
-	public String getWebElementText(WebElement ele) throws PactivException {
-		waitUntilElementEnabled(ele);
-		return ele.getText();
-	}
-
-	public void waitUntilElementEnabled(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(LocalDriverManager.getDriver(), 60);
-		wait.until(ExpectedConditions.visibilityOf(element));
-	}
-
-	public void waitUntilElementClickable(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(LocalDriverManager.getDriver(), 60);
-		wait.until(ExpectedConditions.elementToBeClickable(element));
-	}
-
-	public void waitByTime(long t) throws PactivException {
-		try {
-			LOG.info("In waitByTime for " + t + " seconds");
-			Thread.sleep(t);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			LOG.error("Printing exception :: " + e.getMessage());
-			throw new PactivException(e);
-		}
-	}
-
-	public void enterTab() throws PactivException {
-		LOG.info("Before Pressing Tab");
-		sendKeysAction(Keys.TAB);
-		LOG.info("After Pressing Tab");
-	}
-
-	public boolean selectOption(WebElement element, String option) {
-		LOG.info("In selectOption on " + element + " with options as " + option);
-		Select dropdown = new Select(element);
-		addPageLoadTimeout();
-		dropdown.selectByVisibleText(option);
-		if (dropdown.getFirstSelectedOption().getText().equals(option))
-			return true;
-		else
-			return false;
-	}
-
-	public void selectOption(WebElement element) throws PactivException {
-		try {
-			LOG.info("In selectOption on " + element);
-			waitUntilElementClickable(element);
-			Select dropdown = new Select(element);
-			dropdown.selectByIndex(1);
-			dropdown.getFirstSelectedOption();
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-			throw new PactivException("Printing exception ::" + e.getMessage());
-		}
-	}
 	
-	public boolean gClick(WebElement elementLocator) throws PactivException {
-		try {
-			LOG.info("in gclick ::{}", elementLocator);
-			if (elementLocator.isEnabled()) {
-				waitUntilElementClickable(elementLocator);
-				(elementLocator).click();
-				hitEscapeKeyForPopups();
-				return true;
-			} else {
-				LOG.info("Element is not enabled::{}", elementLocator);
-				return false;
-			}
-		} catch (Throwable t) {
-			LOG.error("Printing error : " + t.getMessage());
-//			String homescreenshot = takescreenshot("home page");
-//			TestResultsUtils.logger.log(LogStatus.FAIL, "Field is not clicked",
-//					TestResultsUtils.logger.addBase64ScreenShot(homescreenshot));
-			;
-			throw new PactivException("gClick Exception");
-
-		}
-	}
-
 }

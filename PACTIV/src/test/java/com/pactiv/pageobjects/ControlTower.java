@@ -43,6 +43,5 @@ public class ControlTower {
 	public static By blendchangeevents_header = By.xpath(repository.getProperty("BLENDCHANGEEVENTS_HEADER"));
 	public static By blendalarms_header = By.xpath(repository.getProperty("BLENDALARMS_HEADER"));
 	public static By line_assignment = By.xpath(repository.getProperty("LINEASSIGNMENT"));
-	public final By controlTowerIconDashboard = By.xpath(repository.getProperty("CONTROLTOWER_ICON_DASHBOARD"));
 	
 }

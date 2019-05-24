@@ -3,7 +3,7 @@ Feature: LoginAction
   Background: Launch the Browser
    Given User launches the Pactiv application
 
-  @RegressionTest1
+  @RegressionTests
   Scenario Outline: Verify the ProductionTracking Data
     Given User enters Username "<username>" and Password "<password>" 
     When User Clicks on Submit button

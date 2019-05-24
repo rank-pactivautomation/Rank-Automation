@@ -19,5 +19,6 @@ public class BreadCrumb {
 	public static By grinderasset_dropdownvalue = By.xpath(repository.getProperty("GRINDERASSET_DROPDOWNVALUE"));
 	public static By plantview_dropdownvalue = By.xpath(repository.getProperty("PLANTVIEW_BREADCRUMB"));
 	public static By materialcontrolview_dropdownvalue = By.xpath(repository.getProperty("MATERIALCONTROLVIEW_BREADCRUMB"));
+	public static By materialcontrolview_expandicon = By.xpath(repository.getProperty("MATERIALCONTROLVIEW_EXPANDICON"));
 	
 }

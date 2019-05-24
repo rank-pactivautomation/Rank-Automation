@@ -42,7 +42,7 @@ public class Constants {
 	
 
 	/** The Constant END_TO_END_FEATURES_PATH. */
-	public static final String END_TO_END_FEATURES_PATH = "src/test/resources/features/LoginFunctionality.feature";
+	public static final String END_TO_END_FEATURES_PATH = "C:\\Users\\dzk2454\\Documents\\PACTIV\\PACTIV\\PACTIV\\src\\test\\resources\\features\\LoginFunctionality.feature";
 	
 	/** The Constant PASS. */
 	public static final String PASS = "Pass";
@@ -59,10 +59,14 @@ public class Constants {
 	/** The Constant APPURL. */
 	public static final String APPURL = "APPURL";
 	
+	/** The Constant MOORESVILLE_QA. */
+	public static final String MOORESVILLE_QA = "MOORESVILLE_QA";
+	
+	/** The Constant MOORESVILLE_STAGING. */
+	public static final String MOORESVILLE_STAGING = "MOORESVILLE_STAGING";
+	
 	/** The Constant STAGURL. */
 	public static final String STAGURL = "STAGURL";
-	
-	public static final String DMGURL =  "DMGURL";
 	
 	/** The Constant TRUE. */
 	public static final String TRUE = "TRUE";
@@ -188,10 +192,26 @@ public class Constants {
 
 	/** The Constant Dollar. */
 	public static final String Dollar = "$";
+	/** The Constant MOORESVILLE_PRODUCTIONRUNTOOL_OBJECTREPOSITORY_PROPERTY. */
+	public static final String MOORESVILLE_PRODUCTIONRUNTOOL_OBJECTREPOSITORY_PROPERTY = "\\src\\test\\resources\\properties\\MvrProductionTrackingTool.property";
+	
+	/** The Constant MOORESVILLE_NOTIFICATIONS_OBJECTREPOSITORY_PROPERTY. */
+	public static final String MOORESVILLE_NOTIFICATIONS_OBJECTREPOSITORY_PROPERTY = "\\src\\test\\resources\\properties\\MvrNotifications.property";
+	
+	/** The Constant MOORESVILLE_EOLSCREEN_OBJECTREPOSITORY_PROPERTY. */
+	public static final String MOORESVILLE_EOL_OBJECTREPOSITORY_PROPERTY = "\\src\\test\\resources\\properties\\mvrEol.property";
+	
+	/** The Constant MOORESVILLE_MATERIALCONTROLVIEW_OBJECTREPOSITORY_PROPERTY. */
+	public static final String MOORESVILLE_MATERIALCONTROLVIEW_OBJECTREPOSITORY_PROPERTY = "\\src\\test\\resources\\properties\\MvrMaterialControl.property";
+	
+	/** The Constant MOORESVILLE_PLANTVIEW_OBJECTREPOSITORY_PROPERTY. */
+	public static final String MOORESVILLE_PLANTVIEW_OBJECTREPOSITORY_PROPERTY = "\\src\\test\\resources\\properties\\MvrPlantview.property";
 	
 	/** The Constant PACTIV_PRODUCTIONTRACKING_OBJECTREPOSITORY_PROPERTY. */
 	public static final String PACTIV_PRODUCTIONTRACKING_OBJECTREPOSITORY_PROPERTY = "\\src\\test\\resources\\properties\\ProductionTracking.property";
 	
+	/** The Constant PACTIV_CPT_DMG_OBJECTREPOSITORY_PROPERTY. */
+	public static final String PACTIV_CPT_DMG_OBJECTREPOSITORY_PROPERTY = "\\\\src\\\\test\\\\resources\\\\properties\\\\DMGApp.property";
 	
 	/** The Constant PACTIV_LOGIN_OBJECTREPOSITORY_PROPERTY. */
 	public static final String PACTIV_LOGIN_OBJECTREPOSITORY_PROPERTY = "\\src\\test\\resources\\properties\\PactivLogin.property";
@@ -213,8 +233,6 @@ public class Constants {
 	
 	/** The Constant PACTIV_BREADCRUMB_OBJECTREPOSITORY_PROPERTY. */
 	public static final String PACTIV_BREADCRUMB_OBJECTREPOSITORY_PROPERTY = "\\src\\test\\resources\\properties\\BreadCrumb.property";
-	
-	public static final String PACTIV_CPT_DMG_OBJECTREPOSITORY_PROPERTY = "\\\\src\\\\test\\\\resources\\\\properties\\\\DMGApp.property";
 	 
 		/** The Constant LOG_FILE_NAME. */
 	// Test data Path
@@ -236,6 +254,14 @@ public class Constants {
 	/** The Constant TEST_DATA_PATH. */
 	// TestReport Path
 	public static final String TEST_DATA_PATH = "\\src\\test\\resources\\testdata\\testData.xlsx";
+	
+	/** The Constant CONFIG_TEST_DATA_PATH. */
+	// TestReport Path
+	public static final String CONFIG_TEST_DATA_PATH = "\\src\\test\\resources\\testdata\\Execution_Configuration.xlsx";
+	
+	/** The Constant CONFIGURATION_DATA_PATH. */
+	// TestReport Path
+	public static final String CONFIGURATION_DATA_PATH = "\\src\\test\\resources\\testdata\\Configuration.xlsx";
 
 	/** The Constant LOG4J_FILE_PATH. */
 	// LOG4J path
@@ -310,7 +336,7 @@ public class Constants {
 	public static final String IE = "ie";
 
 	/** The Constant CHROME. */
-	public static final String CHROME = "chrome";
+	public static final String CHROME = "Chrome";
 
 	/** The Constant MOZILLA_FIREFOX. */
 	public static final String MOZILLA_FIREFOX = "firefox";

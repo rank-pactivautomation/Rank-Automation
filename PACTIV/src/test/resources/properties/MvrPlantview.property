@@ -1,0 +1,22 @@
+PLANTVIEW_ICON=//*[@id="root_menu-12"]/li[1]/table/tbody/tr/td/a/img
+PLANTVIEW_TITLE=//span[contains(text(),'Mooresville Plant View')]
+PLANTVIEW_DROP=//div[contains(text(),'PLANT VIEW')]
+DROPDOWN=//*[@class = "dhxlist-dropdown-current-selection-container"]
+MATERIAL_DROP=//div[contains(text(),'MATERIAL CONTROL VIEW')]
+MATERIAL_TITLE=//div[contains(text(),'Material Control View')]
+WIDGET_LINENAME=(//div[contains(@class,'widget-content widget-label')]/span)[2]
+WIDGET_TOTAL_ALARMS_TITLE=//span[contains(text(),'Total Alarms :')]   
+WIDGET_TOTALWARNINGS_TITLE=//*[@id="root_pagemashupcontainer-6_mashupcontainer-19_label-271"]/span
+WIDGET_TOTAL_ALARMS_VALUE=(//div[contains(@class,'valuedisplay-container')]/div/span)[1]
+WIDGET_TOTAL_WARNINGS_VALUE=(//div[contains(@class,'valuedisplay-container')]/div/span)[2]
+WIDGET_ACTIVITY_EXPAND=//*[@id="root_pagemashupcontainer-6_mashupcontainer-19_navigation-272"]/button
+ACTIVITYLOG_TITLE=//span[contains(text(),'Activity Log')]
+PLANT_OEE=//*[@id="root_pagemashupcontainer-6_mashupcontainer-6_OEECardWidget-49"]/div/div/p[1]
+OEE_VALUE=//*[@id="root_pagemashupcontainer-6_mashupcontainer-6_OEECardWidget-49"]/div/div/p[2]/span
+ASSET=//th[contains(text(),"Asset")]
+DESCRIPTION=//th[contains(text(),"Description")]
+DURATION=//th[contains(text(),"Duration")]
+SETPOINT=//th[contains(text(),"Setpoint")]
+ACTUAL=//th[contains(text(),"Actual")]
+UCL/LCL=//th[contains(text(),"UCL/LCL")]
+STATUS=//th[contains(text(),"Status")]

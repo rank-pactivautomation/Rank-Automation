@@ -148,25 +148,25 @@ Feature: LoginAction
      #| username_11			 |	password_11| line_11| processSheet_11|
   
 
- Scenario Outline: Upload the Process Sheet after renaming the files
-    Given User enters Username "<username>" and Password "<password>"
-    When User Clicks on Submit button
-    And User Clicks on expand icon for Line 4 on plant view
-    And User should land to Line View for Line 4
-    And User selects the "<line>" from the Line dropdown in Line View 
-    And User clicks on Upload a Process sheet button
-    And User clicks on Upload New button
-    And User renames the Process Sheet "<processSheet>"  
-    And User clicks on Upload button
-    And User verify the message for successfull upload of file
-    And User Clicks on Save button
-    And User Clicks on Ok button
-    
-    
-    Examples:
-    	
-     | username          | password   | line    | processSheet |
-     | username_1		 		 | password_1 | line_1  | processSheet_1|
+ #Scenario Outline: Upload the Process Sheet after renaming the files
+    #Given User enters Username "<username>" and Password "<password>"
+    #When User Clicks on Submit button
+    #And User Clicks on expand icon for Line 4 on plant view
+    #And User should land to Line View for Line 4
+    #And User selects the "<line>" from the Line dropdown in Line View 
+    #And User clicks on Upload a Process sheet button
+    #And User clicks on Upload New button
+    #And User renames the Process Sheet "<processSheet>"  
+    #And User clicks on Upload button
+    #And User verify the message for successfull upload of file
+    #And User Clicks on Save button
+    #And User Clicks on Ok button
+    #
+    #
+    #Examples:
+    #	
+     #| username          | password   | line    | processSheet |
+     #| username_1		 		 | password_1 | line_1  | processSheet_1|
      #| username_2			 | password_2 | line_2  | processSheet_2|
      #| username_3			 |	password_3| line_3  | processSheet_3 |
      #| username_4			 |	password_4| line_4  | processSheet_4 |

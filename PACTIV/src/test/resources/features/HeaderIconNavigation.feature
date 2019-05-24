@@ -59,7 +59,7 @@ Feature: LoginAction
       
    Scenario Outline: Verify the Headers for Floater
     Given User enters Username "<username>" and Password "<password>" 
-    When User Clicks on Submit button 
+    When User Clicks on Submit button
     Then User verify the title on Dashboard Page 
     Then User Clicks on Production Tracking Icon for Floater
     Then User verify the title on Production Tracking Page

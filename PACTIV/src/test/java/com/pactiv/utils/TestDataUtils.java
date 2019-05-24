@@ -7,6 +7,8 @@ import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -18,11 +20,22 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.TreeMap;
+
+import org.apache.commons.collections.CollectionUtils;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -32,6 +45,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.codoid.products.exception.FilloException;
+import com.codoid.products.fillo.Connection;
+import com.codoid.products.fillo.Fillo;
+import com.codoid.products.fillo.Recordset;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import com.pactiv.config.LocalDriverManager;
@@ -58,19 +76,42 @@ public class TestDataUtils extends SeleniumNGSuite {
 	/** The repoistory. */
 	public static PropertyUtils repoistory = new PropertyUtils(baseProjectPath.concat(Constants.CONFIG_PROPERTY));
 
-	DCTUtils dc=new DCTUtils();
+	DCTUtils dc = new DCTUtils();
 	DriverUtilsImpl usablemethods = new DriverUtilsImpl();
-	PactivLogin PactivLogin = new PactivLogin();
-		
+	public static LinkedHashMap<String, String> hmap = new LinkedHashMap<String, String>();
+	public static HashMap<String, String> hmap3 = new HashMap<String, String>();
+	public static int flag = 0;
+	public static List<String> valueStored = new ArrayList<String>();
+	public static List<String> valueList = new ArrayList<String>();
+	public static int flagValue;
+	static boolean launchBrowser = false;
+	static int fileCount = 0;
+
+	public static PropertyUtils configprops = new PropertyUtils(baseProjectPath.concat(Constants.CONFIG_PROPERTY));
+	/** The urlNew. */
+	public static String urlQA = Constants.APPURL;
+
+	/** The BrowserName. */
+	public static String browser = "";
+
+	/** The MooresVilleURL. */
+	public static String mooresville_qa = Constants.MOORESVILLE_QA;
+
+	/** The MooresVilleURL. */
+	public static String mooresville_staging = Constants.MOORESVILLE_STAGING;
+
+	/** The StagURL. */
+	public static String urlStag = Constants.STAGURL;
 	public static ArrayList<String> list = new ArrayList<String>();
+	public static List<String> list3 = new ArrayList<String>();
+	public static List<String> list2 = new ArrayList<String>();
+
 	/**
 	 * Close Button
 	 *
-	 * @param scenario
-	 *            the scenario
-	 * @throws PactivException 
-	 * @throws IOException
-	 *             the IOException
+	 * @param scenario the scenario
+	 * @throws PactivException
+	 * @throws IOException     the IOException
 	 */
 	public void CloseButtonClick() {
 		try {
@@ -80,17 +121,15 @@ public class TestDataUtils extends SeleniumNGSuite {
 			e.getMessage();
 		}
 	}
+
 	/**
 	 * Ok Button
 	 *
-	 * @param scenario
-	 *            the scenario
-	 * @throws PactivException 
-	 * @throws IOException
-	 *             the IOException
+	 * @param scenario the scenario
+	 * @throws PactivException
+	 * @throws IOException     the IOException
 	 */
-	public void OkButtonClick()
-	{
+	public void OkButtonClick() {
 		try {
 			usablemethods.gClick(UploadProcessSheet.ok_buttonmessage);
 			TestResultsUtils.logger.log(LogStatus.PASS, "Click on Ok button");
@@ -98,87 +137,94 @@ public class TestDataUtils extends SeleniumNGSuite {
 			e.getMessage();
 		}
 	}
+
 	/**
 	 * UploadButtonClick
 	 *
-	 * @param scenario
-	 *            the scenario
-	 * @throws PactivException 
-	 * @throws IOException
-	 *             the IOException
+	 * @param scenario the scenario
+	 * @throws PactivException
+	 * @throws IOException     the IOException
 	 */
-	public void UploadButtonClick()
-	{
+	public void UploadButtonClick() {
 		try {
 			usablemethods.gClick(UploadProcessSheet.updatebutton);
 			TestResultsUtils.logger.log(LogStatus.PASS, "Click on Update Button");
-			}
-			catch(PactivException e) {
-				e.getMessage();
-			}
+		} catch (PactivException e) {
+			e.getMessage();
+		}
 	}
-	
+
 	/**
 	 * launch the App
 	 *
-	 * @param scenario
-	 *            the scenario
-	 * @throws PactivException 
-	 * @throws IOException
-	 *             the IOException
+	 * @param scenario the scenario
+	 * @throws PactivException
+	 * @throws IOException     the IOException
 	 */
-	public void LaunchApp(String url) throws PactivException {
+	public boolean LaunchApp() throws PactivException {
 		try {
+	
 			SeleniumNGSuite seleniumObj = new SeleniumNGSuite();
-			seleniumObj.setUpSuite(url);
-			LOG.info("Access the PACTIV URL::PASS");
+//			if (launchBrowser) {
+				seleniumObj.setUpSuite(readDataToExecute("ExecutionConfiguration"));
+
+//			}
+		
 
 		} catch (Exception exception) {
-			LOG.error("Access the PACTIV URL::FAIL::{}", exception.getMessage());
-			String homescreenshot = usablemethods.takescreenshot("home page");
-			TestResultsUtils.logger.log(LogStatus.FAIL, "Application launch failed",
-					TestResultsUtils.logger.addBase64ScreenShot(homescreenshot));
+			{
+
+				LOG.error("Access the PACTIV URL::FAIL::{}", exception.getMessage());
+				String homescreenshot = usablemethods.takescreenshot("home page");
+				TestResultsUtils.logger.log(LogStatus.FAIL, "Application launch failed",
+						TestResultsUtils.logger.addBase64ScreenShot(homescreenshot));
+
+			}
 
 		} catch (Throwable throwable) {
-			throwable.printStackTrace();
-			LOG.error("Access the PACTIV URL::FAIL::{}", throwable.getMessage());
-			String homescreenshot = usablemethods.takescreenshot("home page");
-			TestResultsUtils.logger.log(LogStatus.FAIL, "Application launch failed",
-					TestResultsUtils.logger.addBase64ScreenShot(homescreenshot));
+			{
+
+				throwable.printStackTrace();
+				LOG.error("Access the PACTIV URL::FAIL::{}", throwable.getMessage());
+				String homescreenshot = usablemethods.takescreenshot("home page");
+				TestResultsUtils.logger.log(LogStatus.FAIL, "Application launch failed",
+						TestResultsUtils.logger.addBase64ScreenShot(homescreenshot));
+
+			}
 		}
+		return launchBrowser;
 	}
+
 	/**
 	 * logout from the App
 	 *
-	 * @param scenario
-	 *            the scenario
-	 * @throws PactivException 
-	 * @throws IOException
-	 *             the IOException
+	 * @param scenario the scenario
+	 * @throws PactivException
+	 * @throws IOException     the IOException
 	 */
 	public void Logout() throws PactivException {
-		if (usablemethods.isElementPresentAndDisplayed(PactivLogin.logout_button)) {
+		try {
 			usablemethods.gClick(PactivLogin.logout_button);
 			TestResultsUtils.logger.log(LogStatus.PASS, "User is able to click on logout button");
-		} else {
-			String homescreenshot = usablemethods.takescreenshot("home page");
-			TestResultsUtils.logger.log(LogStatus.FAIL, "User is NOT able to click on logout button",
-					TestResultsUtils.logger.addBase64ScreenShot(homescreenshot));
+		} catch (Exception exception) {
+			if (launchBrowser) {
+				String homescreenshot = usablemethods.takescreenshot("home page");
+				TestResultsUtils.logger.log(LogStatus.FAIL, "User is NOT able to click on logout button",
+						TestResultsUtils.logger.addBase64ScreenShot(homescreenshot));
+			}
 		}
 	}
-	
+
 	/**
 	 * read a CSV file
 	 *
-	 * @param scenario
-	 *            the scenario
-	 * @throws IOException
-	 *             the IOException
+	 * @param scenario the scenario
+	 * @throws IOException the IOException
 	 */
 	public void readCSV(String fileName) throws Exception {
 
 		// This will load csv file
-		String orPath = baseProjectPath.concat(Constants.PROCESSSHEET_DATA_PATH);
+		String orPath = baseProjectPath.concat(Constants.CONFIGURATION_DATA_PATH);
 		CSVReader reader = new CSVReader(new FileReader(orPath));
 		// this will load content into list
 		List<String[]> li = reader.readAll();
@@ -198,19 +244,17 @@ public class TestDataUtils extends SeleniumNGSuite {
 			System.out.println("   ");
 		}
 		reader.close();
-		}
+	}
+
 	/**
 	 * get the json response
 	 *
-	 * @param scenario
-	 *            the scenario
-	 * @throws Exception 
-	 * @throws Throwable 
-	 * @throws IOException
-	 *             the IOException
+	 * @param scenario the scenario
+	 * @throws Exception
+	 * @throws Throwable
+	 * @throws IOException the IOException
 	 */
-	public List<String> jsonResponse(String arg1, String arg2) throws Exception 
-	{
+	public List<String> jsonResponse(String arg1, String arg2) throws Exception {
 		StringBuilder result = new StringBuilder();
 		String url = Constants.ASSET_APIURL.concat(arg1).concat(Constants.PART_APIURL).concat(arg2);
 		URL obj = new URL(url);
@@ -245,40 +289,36 @@ public class TestDataUtils extends SeleniumNGSuite {
 				list.add("--");
 			}
 			list.add(String.valueOf(jsonobj_1.getInt("MachineSetPoint")));
-			if(jsonobj_1.getString("ActualValue").equals("0.00")) {
+			if (jsonobj_1.getString("ActualValue").equals("0.00")) {
 				list.add("--");
-			}
-			else {
-			list.add(jsonobj_1.getString("ActualValue"));
+			} else {
+				list.add(jsonobj_1.getString("ActualValue"));
 			}
 			map.put(jsonobj_1.getString("PropertyName"), new ArrayList<String>(list));
 		}
 		System.out.println(list);
-		int l=list.size();
+		int l = list.size();
 		System.out.println(l);
 		return list;
 	}
+
 	/**
 	 * write in a CSV file
 	 *
-	 * @param scenario
-	 *            the scenario
-	 * @throws IOException
-	 *             the IOException
+	 * @param scenario the scenario
+	 * @throws IOException the IOException
 	 */
 	/**
 	 * read the Process Sheet data in UI
 	 *
-	 * @param scenario
-	 *            the scenario
-	 * @throws Exception 
-	 * @throws Throwable 
-	 * @throws IOException
-	 *             the IOException
+	 * @param scenario the scenario
+	 * @throws Exception
+	 * @throws Throwable
+	 * @throws IOException the IOException
 	 */
 	public List<String> readDataUI() throws Exception {
 		try {
-		 List<WebElement> tags = LocalDriverManager.getDriver()
+			List<WebElement> tags = LocalDriverManager.getDriver()
 					.findElements(By.xpath("//div[@class='customAssetProcessSheet-content']//h3"));
 			LinkedHashMap<String, List<String>> map1 = new LinkedHashMap<String, List<String>>();
 			List<String> list1 = new ArrayList<String>();
@@ -288,79 +328,79 @@ public class TestDataUtils extends SeleniumNGSuite {
 			for (int i = 1; i <= tags.size(); i++) {
 				division = LocalDriverManager.getDriver()
 						.findElements(By.xpath("//div[@class='customAssetProcessSheet-content']//div[" + i + "]/div"));
-				for (int j = division.size(); j >0; j--) {
-					data = LocalDriverManager.getDriver().findElements(By
-							.xpath("//div[@class='customAssetProcessSheet-content']//div[" + i + "]/div[" + j + "]/span"));
+				for (int j = division.size(); j > 0; j--) {
+					data = LocalDriverManager.getDriver().findElements(By.xpath(
+							"//div[@class='customAssetProcessSheet-content']//div[" + i + "]/div[" + j + "]/span"));
 					for (int k = 1; k <= data.size() - 1; k++) {
 						Thread.sleep(3000);
 						search = LocalDriverManager.getDriver()
-								.findElement(By.xpath("//div[@class='customAssetProcessSheet-content']//div[" + i + "]/div["+ j + "]/span[" + k + "]")).getText();
+								.findElement(By.xpath("//div[@class='customAssetProcessSheet-content']//div[" + i
+										+ "]/div[" + j + "]/span[" + k + "]"))
+								.getText();
 						list1.add(search);
-						map1.put(search, new ArrayList<String>(list1));	
-						
-					}	
-					}	
+						map1.put(search, new ArrayList<String>(list1));
+
+					}
+				}
 			}
-			int l=list1.size();
+			int l = list1.size();
+			System.out.println(l);
+			return list1;
+		} catch (Exception e) {
+			List<WebElement> tags = LocalDriverManager.getDriver()
+					.findElements(By.xpath("//div[@class='customAssetProcessSheet-content']//h3"));
+			LinkedHashMap<String, List<String>> map1 = new LinkedHashMap<String, List<String>>();
+			List<String> list1 = new ArrayList<String>();
+			List<WebElement> division = null;
+			List<WebElement> data = null;
+			String search = null;
+			for (int i = 1; i <= tags.size(); i++) {
+				division = LocalDriverManager.getDriver()
+						.findElements(By.xpath("//div[@class='customAssetProcessSheet-content']//div[" + i + "]/div"));
+				for (int j = division.size(); j > 0; j--) {
+					data = LocalDriverManager.getDriver().findElements(By.xpath(
+							"//div[@class='customAssetProcessSheet-content']//div[" + i + "]/div[" + j + "]/span"));
+					for (int k = 1; k <= data.size() - 1; k++) {
+
+						search = LocalDriverManager.getDriver()
+								.findElement(By.xpath("//div[@class='customAssetProcessSheet-content']//div[" + i
+										+ "]/div[" + j + "]/span[" + k + "]"))
+								.getText();
+						list1.add(search);
+						map1.put(search, new ArrayList<String>(list1));
+
+					}
+				}
+			}
+			int l = list1.size();
 			System.out.println(l);
 			return list1;
 		}
-			catch(Exception e)
-			{
-				List<WebElement> tags = LocalDriverManager.getDriver()
-						.findElements(By.xpath("//div[@class='customAssetProcessSheet-content']//h3"));
-				LinkedHashMap<String, List<String>> map1 = new LinkedHashMap<String, List<String>>();
-				List<String> list1 = new ArrayList<String>();
-				List<WebElement> division = null;
-				List<WebElement> data = null;
-				String search = null;
-				for (int i = 1; i <= tags.size(); i++) {
-					division = LocalDriverManager.getDriver()
-							.findElements(By.xpath("//div[@class='customAssetProcessSheet-content']//div[" + i + "]/div"));
-					for (int j = division.size(); j >0; j--) {
-						data = LocalDriverManager.getDriver().findElements(By
-								.xpath("//div[@class='customAssetProcessSheet-content']//div[" + i + "]/div[" + j + "]/span"));
-						for (int k = 1; k <= data.size() - 1; k++) {
-							
-							search = LocalDriverManager.getDriver()
-									.findElement(By.xpath("//div[@class='customAssetProcessSheet-content']//div[" + i + "]/div["+ j + "]/span[" + k + "]")).getText();
-							list1.add(search);
-							map1.put(search, new ArrayList<String>(list1));	
-							
-						}	
-						}	
-				}
-				int l=list1.size();
-				System.out.println(l);
-				return list1;
-			}
 	}
-	public void writeCSV(String fileName) throws Exception
-	   {
-		  String orPath = baseProjectPath.concat(Constants.PROCESSSHEET_DATA_PATH);
-	          // specified by filepath 
-	          File file = new File(orPath); 
-	          try { 
-	              // create FileWriter object with file as parameter 
-	              FileWriter outputfile = new FileWriter(file,true); 
-	        
-	              // create CSVWriter object filewriter object as parameter 
-	              CSVWriter writer = new CSVWriter(outputfile); 
-	      
-	              // add data to csv 
-	              String[] data1 = {"Product", "xyz"}; 
-	              writer.writeNext(data1);
-	              // closing writer connection 
-	              writer.close(); 
-	          } 
-	       catch (IOException e) { 
-	              // TODO Auto-generated catch block 
-	              e.printStackTrace(); 
-	          } 
-	      } 
-	
-	public  void createFileRenameExisting(String arg1) throws Exception
-    {
+
+	public void writeCSV(String fileName) throws Exception {
+		String orPath = baseProjectPath.concat(Constants.PROCESSSHEET_DATA_PATH);
+		// specified by filepath
+		File file = new File(orPath);
+		try {
+			// create FileWriter object with file as parameter
+			FileWriter outputfile = new FileWriter(file, true);
+
+			// create CSVWriter object filewriter object as parameter
+			CSVWriter writer = new CSVWriter(outputfile);
+
+			// add data to csv
+			String[] data1 = { "Product", "xyz" };
+			writer.writeNext(data1);
+			// closing writer connection
+			writer.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void createFileRenameExisting(String arg1) throws Exception {
 		String orPath = "";
 		String processSheet = LocalTestDataManager.getTestDataHashMap().get(arg1);
 		orPath = baseProjectPath.concat(Constants.PROCESSSHEET_DATA_PATH).concat(processSheet) + ".csv";
@@ -397,15 +437,31 @@ public class TestDataUtils extends SeleniumNGSuite {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-    }
-	
+	}
+
 	/**
 	 * Read test data.
 	 *
-	 * @param scenario
-	 *            the scenario
-	 * @throws Throwable
-	 *             the throwable
+	 * @param scenario the scenario
+	 * @throws Throwable the throwable
+	 */
+	public boolean readConfigTestData(Scenario scenario) throws Throwable {
+		LOG.info("===== Reading Feature Details====");
+		LOG.info("Scenario::{}", scenario);
+		LOG.info("Scenario name::{}", scenario.getName());
+		String scenarioName = scenario.getName();
+		LocalTestDataManager.setScenarioname(scenario.getName());
+		LOG.info("****************");
+		LOG.info("Scenario Name:" + scenarioName);
+		readExcel("Execution_Configuration", scenarioName);
+		return launchBrowser;
+	}
+
+	/**
+	 * Read test data.
+	 *
+	 * @param scenario the scenario
+	 * @throws Throwable the throwable
 	 */
 	public void readTestData(Scenario scenario) throws Throwable {
 		LOG.info("===== Reading Feature Details====");
@@ -424,17 +480,249 @@ public class TestDataUtils extends SeleniumNGSuite {
 	/**
 	 * Read from file.
 	 *
-	 * @param featureName
-	 *            the feature name
-	 * @param scenarioName
-	 *            the scenario name
-	 * @throws Throwable
-	 *             the throwable
+	 * 
+	 * 
+	 * @throws Throwable the throwable
+	 */
+	public void readDataFromFile(String fileName, String scenarioName) throws Throwable {
+
+		String scenario = "";
+		int index = 0;
+		List<String> list4 = new ArrayList<String>();
+		String filepath = baseProjectPath.concat(Constants.CONFIG_TEST_DATA_PATH);
+		FileInputStream inputstream = new FileInputStream(new File(filepath));
+		@SuppressWarnings("resource")
+		Workbook workbook = new XSSFWorkbook(inputstream);
+		Sheet firstsheet = workbook.getSheet("Execution_Configuration");
+		Iterator<Row> iterator = firstsheet.iterator();
+		LOG.info("SheetName is: " + firstsheet.getSheetName());
+		while (iterator.hasNext()) {
+			Row nextrow = iterator.next();
+			if (nextrow.getRowNum() < 4) {
+				continue;
+			}
+			Iterator<Cell> celliterator = nextrow.cellIterator();
+
+			while (celliterator.hasNext()) {
+				Cell nextcell = celliterator.next();
+				if (nextcell.getColumnIndex() == 6) {
+					scenario = nextcell.getStringCellValue();
+
+				}
+				if (nextcell.getColumnIndex() == 7 && nextcell.getStringCellValue().equalsIgnoreCase("Yes")) {
+					list4.add(scenario);
+
+				}
+			}
+			index++;
+			for (String str : list4) {
+				if (index == 2) {
+					readFromFile("LoginAction", str);
+				}
+
+			}
+		}
+	}
+
+	public void readExcel(String fileName, String ScenarioName) throws Throwable {
+
+		List<String> list4 = new ArrayList<String>();
+		String filepath = baseProjectPath.concat(Constants.CONFIG_TEST_DATA_PATH);
+		// Create an object of FileInputStream class to read excel file
+
+		FileInputStream inputStream = new FileInputStream(filepath);
+		@SuppressWarnings("resource")
+		Workbook workbook = new XSSFWorkbook(inputStream);
+
+		// Read sheet inside the workbook by its name
+
+		Sheet ProcessSheet = workbook.getSheet("Execution_Configuration");
+
+		// Create a loop over all the rows of excel file to read it
+
+		for (Row row : ProcessSheet) {
+
+			if (row.getRowNum() != 0) {
+				if (row.getRowNum() < 4) {
+					continue;
+				}
+				if (row.getCell(6) != null) {
+					if (row.getCell(6).toString() != null) {
+						if (row.getCell(7).toString().equalsIgnoreCase("Yes")) {
+							list4.add(ProcessSheet.getRow(row.getCell(5).getRowIndex()).getCell(6).toString());
+						}
+						
+				}
+			}
+				for (String str : list4) {
+					readFromFile("LoginAction", str);
+				}
+				}
+		}
+	}
+
+	/**
+	 * Read from the Excel Sheet file
+	 * 
+	 * @throws Exception
+	 *
+	 *
+	 *
+	 */
+
+	public static Map<String, String> getTestDataInMap(String testDataFile, String sheetName,
+			String AutomationTestScriptName) throws Exception {
+		Map<String, String> TestDataInMap = new TreeMap<String, String>();
+		String query = null;
+		query = String.format("SELECT * FROM %s WHERE Execute='Yes' and AutomationTestScriptName='%s'", sheetName,
+				AutomationTestScriptName);
+		Fillo fillo = new Fillo();
+		Connection conn = null;
+		Recordset recordset = null;
+		try {
+			conn = fillo.getConnection(testDataFile);
+			recordset = conn.executeQuery(query);
+			while (recordset.next()) {
+				for (String field : recordset.getFieldNames()) {
+					TestDataInMap.put(field, recordset.getField(field));
+				}
+			}
+
+		} catch (FilloException e) {
+			e.printStackTrace();
+			throw new Exception("Test data cannot find...");
+		}
+		conn.close();
+		return TestDataInMap;
+
+	}
+
+	/**
+	 * Read from Excel Sheet.
+	 *
+	 * 
+	 * @throws Throwable the throwable
+	 */
+
+	@SuppressWarnings("deprecation")
+	public String readDataToExecute(String fileName) throws Throwable {
+		try {
+			String Project_Name = "";
+			String Environment_Name = "";
+			String Browser_Name = "";
+			String filepath = baseProjectPath.concat(Constants.CONFIG_TEST_DATA_PATH);
+			FileInputStream inputstream = new FileInputStream(new File(filepath));
+			@SuppressWarnings("resource")
+			XSSFWorkbook myWorkBook = new XSSFWorkbook(inputstream);
+			List<String> list1 = new ArrayList<String>();
+			List<String> list2 = new ArrayList<String>();
+			List<String> list3 = new ArrayList<String>();
+			// Get first sheet from the workbook
+			XSSFSheet sheet = myWorkBook.getSheet("Execution_Configuration");
+			// Get iterator to all the rows in the current sheet
+			Iterator<Row> rowIterator = sheet.iterator();
+			while (rowIterator.hasNext()) {
+				Row row = rowIterator.next();
+				if (row.getRowNum() < 3) {
+					continue;
+				}
+				// For each row, iterate through each columns
+				Iterator<Cell> cellIterator = row.cellIterator();
+				while (cellIterator.hasNext()) {
+
+					Cell cell = cellIterator.next();
+
+					switch (cell.getCellType()) {
+					case Cell.CELL_TYPE_BOOLEAN:
+						System.out.print(cell.getBooleanCellValue() + "\t\t");
+						break;
+					case Cell.CELL_TYPE_NUMERIC:
+						System.out.print(cell.getNumericCellValue() + "\t\t");
+						break;
+					case Cell.CELL_TYPE_STRING:
+						System.out.print(cell.getStringCellValue() + "\t\t");
+						if (cell.getColumnIndex() == 1) {
+							list1.add(cell.getStringCellValue());
+							System.out.println(list1);
+
+							for (String str : list1) {
+								if (str.equalsIgnoreCase("MOORESVILLE")) {
+									Project_Name = str;
+									System.out.println(Project_Name);
+									break;
+								} else if (str.equalsIgnoreCase("CPT")) {
+									Project_Name = str;
+									System.out.println(Project_Name);
+									break;
+								}
+								break;
+							}
+						}
+
+						if (cell.getColumnIndex() == 8) {
+							list2.add(cell.getStringCellValue());
+							System.out.println(list2);
+							for (String str : list2) {
+								if (str.equalsIgnoreCase("QA")) {
+									Environment_Name = str;
+									System.out.println(Environment_Name);
+									break;
+								} else if (str.equalsIgnoreCase("Staging")) {
+									Environment_Name = str;
+									System.out.println(Environment_Name);
+									break;
+								}
+							}
+							if (cell.getColumnIndex() == 9) {
+								list3.add(cell.getStringCellValue());
+								for (String str : list3) {
+									if (str.equalsIgnoreCase("Chrome")) {
+										Browser_Name = str;
+										break;
+									} else if (str.equalsIgnoreCase("IE 11")) {
+										Browser_Name = str;
+										break;
+									}
+								}
+							}
+							String Project = Project_Name.concat("_").concat(Environment_Name);
+							if (mooresville_qa.equalsIgnoreCase(Project)) {
+								configprops.getProperty(Constants.MOORESVILLE_QA);
+							} else if (mooresville_staging.equalsIgnoreCase(Project)) {
+								configprops.getProperty(Constants.MOORESVILLE_STAGING);
+							}
+							if (Constants.CHROME.equalsIgnoreCase(Browser_Name)) {
+								browser = configprops.getProperty(browserType);
+							}
+
+							break;
+
+						}
+					case Cell.CELL_TYPE_BLANK:
+						break;
+					}
+
+				}
+			}
+			inputstream.close();
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return urlNew;
+	}
+
+	/**
+	 * Read from file.
+	 *
+	 * @param featureName  the feature name
+	 * @param scenarioName the scenario name
+	 * @throws Throwable the throwable
 	 */
 	public void readFromFile(String featureName, String scenarioName) throws Throwable {
-
-		HashMap<String, String> hmap = new HashMap<String, String>();
-
+		fileCount++;
 		LocalTestDataManager.setScenarioID(scenarioName.split(Constants.COLON)[0]);
 		LOG.info("------------");
 		LOG.info("Scenario_id:" + LocalTestDataManager.getScenarioID());
@@ -444,8 +732,11 @@ public class TestDataUtils extends SeleniumNGSuite {
 		int numberofrows = 0;
 		boolean scenariofound = false;
 		DataFormatter formatter = new DataFormatter();
+		List<String> flag=new ArrayList<String>();
+		List<String> username=new ArrayList<String>();
+		List<String> password=new ArrayList<String>();
 		ArrayList<String> header = new ArrayList<String>();
-		String filepath = baseProjectPath.concat(Constants.TEST_DATA_PATH);
+		String filepath = baseProjectPath.concat(Constants.CONFIG_TEST_DATA_PATH);
 		FileInputStream inputstream = new FileInputStream(new File(filepath));
 		@SuppressWarnings("resource")
 		Workbook workbook = new XSSFWorkbook(inputstream);
@@ -457,6 +748,7 @@ public class TestDataUtils extends SeleniumNGSuite {
 			Iterator<Cell> celliterator = nextrow.cellIterator();
 			while (celliterator.hasNext()) {
 				Cell nextcell = celliterator.next();
+
 				String value = formatter.formatCellValue(nextcell);
 
 				if (value.equalsIgnoreCase(LocalTestDataManager.getScenarioID())) {
@@ -469,10 +761,11 @@ public class TestDataUtils extends SeleniumNGSuite {
 					LOG.info("no of cells 1::" + numberofcells);
 					scenariofound = true;
 					break;
+
 				}
 			}
 		}
-
+		launchBrowser = false;
 		if (scenariofound == true) {
 			Row row = firstsheet.getRow(rowNum);
 			for (int p = 0; p < numberofcells; p++) {
@@ -495,25 +788,38 @@ public class TestDataUtils extends SeleniumNGSuite {
 		String key;
 		String value;
 		int count = 1;
+
 		for (int b = 1; b <= numberofrows; b++)
 
 		{
+			HashMap<String, String> hmap1 = new HashMap<String, String>();
 			for (int c = 0; c < numberofcells; c++) {
-				key = header.get(c).concat(Constants.UNDERSCORE + count);
-				LOG.info("key is ::" + key);
-				value = formatter.formatCellValue(firstsheet.getRow(rowNum).getCell(c));
-				LOG.info("value is ::" + value);
-				hmap.put(key, value);
+				if (fileCount == count) {
+					key = header.get(c).concat(Constants.UNDERSCORE + count);
+					LOG.info("key is ::" + key);
+					value = formatter.formatCellValue(firstsheet.getRow(rowNum).getCell(c));
+
+					LOG.info("value is ::" + value);
+					hmap1.put(key, value);
+					
+					for (Map.Entry<String, String> entry : hmap1.entrySet()) {
+						if (entry.getValue().equalsIgnoreCase("Yes")) {
+							hmap.putAll(hmap1);
+							valueStored.add("Yes");
+							// hmap.put(entry.getKey(), entry.getValue());
+							launchBrowser = true;
+						}
+					}
+				}
 			}
 			count++;
 			rowNum++;
 		}
+
 		LocalTestDataManager.setTestDataHashMap(hmap);
 	}
 
-
-
-		/**
+	/**
 	 * Gets the current scenario ID.
 	 *
 	 * @return the current scenario ID
@@ -521,6 +827,5 @@ public class TestDataUtils extends SeleniumNGSuite {
 	public static String getCurrentScenarioID() {
 		return LocalTestDataManager.getScenarioID();
 	}
-
 	
 }

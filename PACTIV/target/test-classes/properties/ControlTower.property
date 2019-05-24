@@ -32,4 +32,4 @@ PT_COLUMN1_DROPDOWNVALUE3=//select[contains(@id,'dropdown2col1')]/option[contain
 BLENDCHANGEEVENTS_HEADER=//div[contains(text(),'BLEND CHANGE EVENTS')]
 BLENDALARMS_HEADER=//div[contains(text(),'BLEND ALARMS')]
 LINEASSIGNMENT=//span[contains(@class,'lines-unassigned')]/img
-CONTROLTOWER_ICON_DASHBOARD=//img[contains(@src, "ControlTower")]
+

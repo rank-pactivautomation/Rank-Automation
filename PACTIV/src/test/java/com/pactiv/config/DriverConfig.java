@@ -23,6 +23,9 @@ import com.pactiv.constants.Constants;
 import com.pactiv.exception.PactivException;
 import com.pactiv.utils.LocalTestDataManager;
 import com.pactiv.utils.PropertyUtils;
+import com.pactiv.utils.TestDataUtils;
+
+import cucumber.api.Scenario;
 
 /**
  * The Class DriverConfig.
@@ -93,30 +96,7 @@ public class DriverConfig {
 					options.addArguments("--disable-browser-side-navigation");
 					options.addArguments("--disable-dev-shm-usage");
 					options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-					driver = ThreadGuard.protect(new ChromeDriver(options));
-					LocalDriverManager.setWebDriver(driver);
-				} catch (Exception exception) {
-					LOG.error("Error while loading Chrome driver::{}", exception.getMessage());
-				} catch (Throwable throwable) {
-					LOG.error("Error while loading Chrome driver::{}", throwable.getMessage());
-				}
-				break;
-			case "chrome headless":
-				try {
-					System.setProperty(Constants.CHROME_WEBDRIVER,
-							baseProjectPath.concat(Constants.CHROME_DRIVER_PATH));
-					ChromeOptions options = new ChromeOptions();
-					options.addArguments("enable-automation");
-					options.addArguments("--headless");
-					options.addArguments("--window-size=1920,1080");
-					options.addArguments("--no-sandbox");
-					options.addArguments("--disable-extensions");
-					options.addArguments("--dns-prefetch-disable");
-					options.addArguments("--disable-gpu");
-					options.addArguments("--disable-browser-side-navigation");
-					options.addArguments("--disable-dev-shm-usage");
-					options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-					driver = ThreadGuard.protect(new ChromeDriver(options));
+					driver = (new ChromeDriver(options));
 					LocalDriverManager.setWebDriver(driver);
 				} catch (Exception exception) {
 					LOG.error("Error while loading Chrome driver::{}", exception.getMessage());
@@ -127,6 +107,7 @@ public class DriverConfig {
 
 			case Constants.IE:
 				try {
+					
 					System.setProperty(Constants.IE_DRIVER, baseProjectPath.concat(Constants.IE_DRIVER_PATH));
 					DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
 					caps.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
