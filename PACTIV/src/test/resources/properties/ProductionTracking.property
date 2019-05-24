@@ -19,3 +19,7 @@ PRODUCTIONTRACKING_1ROW=//div[contains(@id,'rowSelectionPopup')]//ul//li[@class=
 PRODUCTIONTRACKING_2TROW=//div[contains(@id,'rowSelectionPopup')]//ul//li[@class='2T selectable']/span
 DOWNTIMEREASON_DROP_BY_CASES=//*[@cellvalue="Cases Lost'
 DOWNTIMEREASON_DROP=//*[@id="root_pagemashupcontainer-6_mashupcontainer-5_mashupcontainer-130_dhxlist-11"]/div/div[2]/div/div/img
+DOWNTIMEREASON_DROP_BY_CASES=//*[@cellvalue="Cases Lost'
+DOWNTIMEREASON_DROP=//*[@id="root_pagemashupcontainer-6_mashupcontainer-5_mashupcontainer-130_dhxlist-11"]/div/div[2]/div/div/img
+MVR_HORLYBOXES_ZERO=//div[contains(@id,'cell_ShiftDataRepeater_Mashup')]//div[contains(text(),'0')]
+MVR_HOURLYBOXES_PENDING=//div[contains(@id,'cell_ShiftDataRepeater_Mashup')]//div[contains(text(),'pending')]

@@ -42,5 +42,6 @@ public class ProductionTracking {
 			.id(repository.getProperty("PRODUCTIONTRACK_DOWNTIME_L2_DRPDWN"));
 	public final By PRODUCTIONTRACK_DOWNTIME_L3_DRPDWN = By
 			.id(repository.getProperty("PRODUCTIONTRACK_DOWNTIME_L3_DRPDWN"));
+	public static By hourly_pendingboxes= By.xpath(repository.getProperty("MVR_HOURLYBOXES_PENDING"));
 	
 }
