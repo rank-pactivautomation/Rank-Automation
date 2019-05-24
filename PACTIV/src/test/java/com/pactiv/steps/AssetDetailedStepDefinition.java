@@ -167,7 +167,7 @@ public class AssetDetailedStepDefinition extends TestDataUtils {
 					System.out.println("Data is not matching" + list);
 					TestResultsUtils.logger.log(LogStatus.PASS, "Data is not matching" + list);
 				}
-			   
+			  System.out.println("git");
 		}
 	}
 }
