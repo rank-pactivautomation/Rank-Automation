@@ -1,0 +1,17 @@
+2019-04-26 05:40:14,026 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - In before step definition for scenario::Successful log into Pactiv application with Valid Credentials as Floater
+2019-04-26 05:40:14,032 [main] INFO com.pactiv.utils.TestDataUtils - ===== Reading Feature Details====
+2019-04-26 05:40:14,032 [main] INFO com.pactiv.utils.TestDataUtils - Scenario::cucumber.runtime.ScenarioImpl@29f7cefd
+2019-04-26 05:40:14,033 [main] INFO com.pactiv.utils.TestDataUtils - Scenario name::Successful log into Pactiv application with Valid Credentials as Floater
+2019-04-26 05:40:14,033 [main] INFO com.pactiv.utils.TestDataUtils - ****************
+2019-04-26 05:40:14,033 [main] INFO com.pactiv.utils.TestDataUtils - Scenario Name:Successful log into Pactiv application with Valid Credentials as Floater
+2019-04-26 05:40:14,037 [main] INFO com.pactiv.utils.TestDataUtils - feature file Name:loginaction
+2019-04-26 05:40:14,037 [main] INFO com.pactiv.utils.TestDataUtils - ------------
+2019-04-26 05:40:14,038 [main] INFO com.pactiv.utils.TestDataUtils - Scenario_id:Successful log into Pactiv application with Valid Credentials as Floater
+2019-04-26 05:40:14,072 [main] ERROR com.pactiv.steps.BeforeAfterStepDefinition - Scenario::Successful log into Pactiv application with Valid Credentials as Floater-Error in execution of before testException is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\testdata\CPTtestData.xlsx (The system cannot find the file specified)
+2019-04-26 05:40:14,290 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome
+2019-04-26 05:40:23,134 [main] INFO com.pactiv.utils.TestDataUtils - Access the PACTIV URL::PASS
+2019-04-26 05:40:23,143 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-04-26 05:40:23,152 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-userid')]
+2019-04-26 05:40:28,333 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - Current scenario status is::null
+2019-04-26 05:40:29,612 [main] INFO com.pactiv.config.SeleniumNGSuite - Successfully closed the browser 
+2019-04-26 05:40:39,651 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome

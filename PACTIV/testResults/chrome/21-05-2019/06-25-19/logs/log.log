@@ -1,0 +1,89 @@
+2019-05-21 06:25:20,462 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - In before step definition for scenario::Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-21 06:25:20,478 [main] INFO com.pactiv.utils.TestDataUtils - ===== Reading Feature Details====
+2019-05-21 06:25:20,478 [main] INFO com.pactiv.utils.TestDataUtils - Scenario::cucumber.runtime.ScenarioImpl@13526e59
+2019-05-21 06:25:20,478 [main] INFO com.pactiv.utils.TestDataUtils - Scenario name::Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-21 06:25:20,478 [main] INFO com.pactiv.utils.TestDataUtils - ****************
+2019-05-21 06:25:20,478 [main] INFO com.pactiv.utils.TestDataUtils - Scenario Name:Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-21 06:25:20,478 [main] INFO com.pactiv.utils.TestDataUtils - feature file Name:loginaction
+2019-05-21 06:25:20,478 [main] INFO com.pactiv.utils.TestDataUtils - ------------
+2019-05-21 06:25:20,478 [main] INFO com.pactiv.utils.TestDataUtils - Scenario_id:Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-21 06:25:21,290 [main] INFO com.pactiv.utils.TestDataUtils - SheetName is: LoginAction
+2019-05-21 06:25:21,327 [main] INFO com.pactiv.utils.TestDataUtils - Row is: 28Column is: 0
+2019-05-21 06:25:21,327 [main] INFO com.pactiv.utils.TestDataUtils - no of cells 1::2
+2019-05-21 06:25:21,327 [main] INFO com.pactiv.utils.TestDataUtils - header::[username, password]
+2019-05-21 06:25:21,327 [main] INFO com.pactiv.utils.TestDataUtils - no of rows::4
+2019-05-21 06:25:21,327 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_1
+2019-05-21 06:25:21,327 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest1
+2019-05-21 06:25:21,327 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_1
+2019-05-21 06:25:21,327 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-21 06:25:21,327 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_2
+2019-05-21 06:25:21,327 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest2
+2019-05-21 06:25:21,327 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_2
+2019-05-21 06:25:21,327 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-21 06:25:21,327 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_3
+2019-05-21 06:25:21,327 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest3
+2019-05-21 06:25:21,327 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_3
+2019-05-21 06:25:21,327 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-21 06:25:21,327 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_4
+2019-05-21 06:25:21,327 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest4
+2019-05-21 06:25:21,327 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_4
+2019-05-21 06:25:21,327 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-21 06:25:21,530 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-21 06:25:21,530 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-21 06:25:21,530 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome
+2019-05-21 06:25:27,552 [main] INFO com.pactiv.utils.TestDataUtils - Access the PACTIV URL::PASS
+2019-05-21 06:25:27,555 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-userid')]
+2019-05-21 06:25:27,783 [main] INFO com.pactiv.utils.DriverUtilsImpl - In sendText():: Entering FloaterTest2 in By.xpath: //input[contains(@name,'thingworx-form-userid')]
+2019-05-21 06:25:28,012 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-password')]
+2019-05-21 06:25:28,362 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@value,'Submit')]
+2019-05-21 06:25:32,092 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-21 06:25:32,094 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-21 06:25:32,096 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-21 06:25:34,585 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-21 06:25:34,587 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ControlTower.property
+2019-05-21 06:25:34,589 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ReportLog.property
+2019-05-21 06:25:34,590 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-21 06:25:34,590 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-21 06:25:34,591 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-21 06:25:39,790 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.id: shift-dd
+2019-05-21 06:25:47,362 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.id: shift-dd
+2019-05-21 06:25:49,851 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-21 06:25:49,853 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-21 06:25:49,854 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-21 06:25:49,855 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-21 06:25:49,855 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-21 06:25:49,855 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //div[contains(@class,'shift-box')][contains(text(),'pending')]
+2019-05-21 06:25:50,141 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-21 06:25:50,142 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-21 06:25:50,572 [main] INFO com.pactiv.utils.DriverUtilsImpl - In sendText():: Entering 120 in By.xpath: //input[contains(@class,'actual-cases-input')]
+2019-05-21 06:25:50,928 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.id: productionTrackingPopup
+2019-05-21 06:25:51,147 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //div[@class='popup-btn save-button']
+2019-05-21 06:25:51,375 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-21 06:25:51,376 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-21 06:25:51,376 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-21 06:25:51,377 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-21 06:25:51,724 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //div[contains(@class,'shift-box')][contains(text(),'pending')]
+2019-05-21 06:25:51,991 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-21 06:25:51,991 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-21 06:25:52,416 [main] INFO com.pactiv.utils.DriverUtilsImpl - In sendText():: Entering 115 in By.xpath: //input[contains(@class,'actual-cases-input')]
+2019-05-21 06:25:52,759 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //span[contains(text(),'Add Diagnosis')]
+2019-05-21 06:25:53,012 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //div[contains(@class,'diagnosis-row')]//ul/li[1]
+2019-05-21 06:25:53,395 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.className: diag-value
+2019-05-21 06:25:53,614 [main] INFO com.pactiv.utils.DriverUtilsImpl - In sendText():: Entering TEST1234 in By.className: scrapped-rows-input
+2019-05-21 06:26:53,937 [main] ERROR com.pactiv.utils.DriverUtilsImpl - Printing error: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on XP (c2b7d30234447e925896903cc45f6b5e)] -> class name: scrapped-rows-input] (tried for 60 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.5.1', revision: '9c21bb67ef', time: '2017-08-17T15:26:08.955Z'
+System info: host: 'PVLDCTWF90', ip: '10.0.9.65', os.name: 'Windows Server 2016', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: com.sun.proxy.$Proxy13
+2019-05-21 06:26:53,937 [main] ERROR com.pactiv.exception.PactivException - Send Text error
+2019-05-21 06:26:53,947 [main] ERROR com.pactiv.exception.PactivException - Send Text error
+2019-05-21 06:26:54,579 [main] ERROR com.pactiv.exception.PactivException - Send Text error
+2019-05-21 06:26:54,579 [main] ERROR com.pactiv.exception.PactivException - Send Text error
+2019-05-21 06:26:54,579 [main] ERROR com.pactiv.exception.PactivException - Send Text error
+2019-05-21 06:26:54,579 [main] ERROR com.pactiv.exception.PactivException - Send Text error
+2019-05-21 06:26:54,595 [main] ERROR com.pactiv.exception.PactivException - null
+2019-05-21 06:26:54,595 [main] ERROR com.pactiv.exception.PactivException - Send Text error
+2019-05-21 06:26:55,267 [main] INFO com.pactiv.config.SeleniumNGSuite - Successfully closed the browser 
+2019-05-21 06:26:55,851 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - Current scenario status is::null
+2019-05-21 06:27:05,952 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome headless
+2019-05-21 06:27:11,922 [main] ERROR com.pactiv.exception.PactivException - null
+2019-05-21 06:27:11,922 [main] ERROR com.pactiv.exception.PactivException - Send Text error

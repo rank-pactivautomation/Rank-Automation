@@ -1,0 +1,12 @@
+DMG_HOME_LOGO=//img[contains(@src,'logo.png')]
+DMG_HOME_LOGOTEXT=//div[contains(.,'CONFIGURATION CONTROL')]
+DMG_ADDPLANT_BTN=//strong[contains(.,'ADD PLANT')]
+DMG_ADDPLANT_HOME_LOGO=//div[text()='Add a New Plant']
+DMG_ADDPLANT_PLANTDETAILS=//div[contains(.,'Plant Details')]/img/..
+DMG_ADDPLANT_SHIFTDETAILS=//div[contains(.,'Shift Details')]/img/..
+DMG_ADDPLANT_PRODDETAILS=//div[contains(.,'Production Details')]/img/..
+DMG_ADDPLANT_USERCONFIG=//div[contains(.,'User Configuration')]/img/..
+DMG_ADDPLANT_RVWPUB=//div[contains(.,'Review & Publish')]/img/..
+DMG_ADDPLANT_PUBLISH_BTN=publish
+DMG_ADDPLANT_SAVEDRAFT_BTN=//div[contains(text(),'Save Draft')]
+DMG_ADDPLANT_BACK_BTN=//div[text()='Add a New Plant']/../div/img[contains(@src,'left-arrow')]

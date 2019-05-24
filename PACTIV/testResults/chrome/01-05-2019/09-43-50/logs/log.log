@@ -1,0 +1,9 @@
+2019-05-01 09:43:51,059 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - In before step definition for scenario::Successful log into Pactiv application with Valid Credentials as Floater
+2019-05-01 09:43:51,062 [main] INFO com.pactiv.utils.TestDataUtils - ===== Reading Feature Details====
+2019-05-01 09:43:51,063 [main] INFO com.pactiv.utils.TestDataUtils - Scenario::cucumber.runtime.ScenarioImpl@700fb871
+2019-05-01 09:43:51,063 [main] INFO com.pactiv.utils.TestDataUtils - Scenario name::Successful log into Pactiv application with Valid Credentials as Floater
+2019-05-01 09:43:51,063 [main] INFO com.pactiv.utils.TestDataUtils - ****************
+2019-05-01 09:43:51,064 [main] INFO com.pactiv.utils.TestDataUtils - Scenario Name:Successful log into Pactiv application with Valid Credentials as Floater
+2019-05-01 09:43:51,065 [main] INFO com.pactiv.utils.TestDataUtils - feature file Name:loginaction
+2019-05-01 09:43:51,065 [main] INFO com.pactiv.utils.TestDataUtils - ------------
+2019-05-01 09:43:51,066 [main] INFO com.pactiv.utils.TestDataUtils - Scenario_id:Successful log into Pactiv application with Valid Credentials as Floater

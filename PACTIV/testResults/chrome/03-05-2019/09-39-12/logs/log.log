@@ -1,0 +1,559 @@
+2019-05-03 09:39:13,355 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - In before step definition for scenario::Successful log into CPT application with Valid Credentials as Floater
+2019-05-03 09:39:13,371 [main] INFO com.pactiv.utils.TestDataUtils - ===== Reading Feature Details====
+2019-05-03 09:39:13,371 [main] INFO com.pactiv.utils.TestDataUtils - Scenario::cucumber.runtime.ScenarioImpl@6ad3381f
+2019-05-03 09:39:13,371 [main] INFO com.pactiv.utils.TestDataUtils - Scenario name::Successful log into CPT application with Valid Credentials as Floater
+2019-05-03 09:39:13,371 [main] INFO com.pactiv.utils.TestDataUtils - ****************
+2019-05-03 09:39:13,371 [main] INFO com.pactiv.utils.TestDataUtils - Scenario Name:Successful log into CPT application with Valid Credentials as Floater
+2019-05-03 09:39:13,371 [main] INFO com.pactiv.utils.TestDataUtils - feature file Name:loginaction
+2019-05-03 09:39:13,371 [main] INFO com.pactiv.utils.TestDataUtils - ------------
+2019-05-03 09:39:13,371 [main] INFO com.pactiv.utils.TestDataUtils - Scenario_id:Successful log into CPT application with Valid Credentials as Floater
+2019-05-03 09:39:14,210 [main] INFO com.pactiv.utils.TestDataUtils - SheetName is: LoginAction
+2019-05-03 09:39:14,210 [main] INFO com.pactiv.utils.TestDataUtils - Row is: 0Column is: 0
+2019-05-03 09:39:14,210 [main] INFO com.pactiv.utils.TestDataUtils - no of cells 1::5
+2019-05-03 09:39:14,241 [main] INFO com.pactiv.utils.TestDataUtils - header::[username, password, Plant, line, shift]
+2019-05-03 09:39:14,241 [main] INFO com.pactiv.utils.TestDataUtils - no of rows::5
+2019-05-03 09:39:14,241 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_1
+2019-05-03 09:39:14,241 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest1
+2019-05-03 09:39:14,241 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_1
+2019-05-03 09:39:14,241 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:39:14,241 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_1
+2019-05-03 09:39:14,241 [main] INFO com.pactiv.utils.TestDataUtils - value is ::Texas
+2019-05-03 09:39:14,241 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_1
+2019-05-03 09:39:14,241 [main] INFO com.pactiv.utils.TestDataUtils - value is ::2
+2019-05-03 09:39:14,241 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_1
+2019-05-03 09:39:14,241 [main] INFO com.pactiv.utils.TestDataUtils - value is ::2
+2019-05-03 09:39:14,241 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_2
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest2
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_2
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_2
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - value is ::Corsicanna
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_2
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - value is ::25
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_2
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - value is ::3
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_3
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest3
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_3
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_3
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - value is ::Mooresville
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_3
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - value is ::40
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_3
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - value is ::2
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_4
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest4
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_4
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_4
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - value is ::Mt Carmel
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_4
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - value is ::72
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_4
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - value is ::3
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_5
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_5
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_5
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_5
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_5
+2019-05-03 09:39:14,256 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:39:14,397 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome
+2019-05-03 09:39:20,144 [main] INFO com.pactiv.utils.TestDataUtils - Access the PACTIV URL::PASS
+2019-05-03 09:39:20,159 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-03 09:39:20,191 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-userid')]
+2019-05-03 09:39:25,592 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-password')]
+2019-05-03 09:39:30,977 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@value,'Submit')]
+2019-05-03 09:39:39,146 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-03 09:39:39,146 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:39:39,239 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ControlTower.property
+2019-05-03 09:39:39,255 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ReportLog.property
+2019-05-03 09:39:39,255 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:39:39,302 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:39:39,675 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //button[contains(@class,'button-element textsize-normal')]
+2019-05-03 09:39:44,893 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - Current scenario status is::null
+2019-05-03 09:39:45,550 [main] INFO com.pactiv.config.SeleniumNGSuite - Successfully closed the browser 
+2019-05-03 09:39:56,067 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome headless
+2019-05-03 09:40:02,215 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - In before step definition for scenario::Successful log into CPT application with Valid Credentials as Supervisor
+2019-05-03 09:40:02,215 [main] INFO com.pactiv.utils.TestDataUtils - ===== Reading Feature Details====
+2019-05-03 09:40:02,215 [main] INFO com.pactiv.utils.TestDataUtils - Scenario::cucumber.runtime.ScenarioImpl@11f406f8
+2019-05-03 09:40:02,215 [main] INFO com.pactiv.utils.TestDataUtils - Scenario name::Successful log into CPT application with Valid Credentials as Supervisor
+2019-05-03 09:40:02,215 [main] INFO com.pactiv.utils.TestDataUtils - ****************
+2019-05-03 09:40:02,215 [main] INFO com.pactiv.utils.TestDataUtils - Scenario Name:Successful log into CPT application with Valid Credentials as Supervisor
+2019-05-03 09:40:02,215 [main] INFO com.pactiv.utils.TestDataUtils - feature file Name:loginaction
+2019-05-03 09:40:02,215 [main] INFO com.pactiv.utils.TestDataUtils - ------------
+2019-05-03 09:40:02,215 [main] INFO com.pactiv.utils.TestDataUtils - Scenario_id:Successful log into CPT application with Valid Credentials as Supervisor
+2019-05-03 09:40:02,267 [main] INFO com.pactiv.utils.TestDataUtils - SheetName is: LoginAction
+2019-05-03 09:40:02,267 [main] INFO com.pactiv.utils.TestDataUtils - Row is: 8Column is: 0
+2019-05-03 09:40:02,267 [main] INFO com.pactiv.utils.TestDataUtils - no of cells 1::5
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - header::[username, password, Plant, line, shift]
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - no of rows::17
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_1
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - value is ::SupervisorTest1
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_1
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_1
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - value is ::Texas
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_1
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - value is ::2
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_1
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - value is ::2
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_2
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - value is ::SupervisorTest2
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_2
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_2
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - value is ::Corsicanna
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_2
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - value is ::25
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_2
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - value is ::3
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_3
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - value is ::SupervisorTest3
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_3
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_3
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - value is ::Mooresville
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_3
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - value is ::40
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_3
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - value is ::2
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_4
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - value is ::SupervisorTest4
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_4
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_4
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - value is ::Mt Carmel
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_4
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - value is ::72
+2019-05-03 09:40:02,277 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_4
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - value is ::3
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_5
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_5
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_5
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_5
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_5
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_6
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_6
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_6
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_6
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_6
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_7
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - value is ::Successful log into CPT application with Valid Credentials as Plant Leadership
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_7
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_7
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_7
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_7
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_8
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - value is ::username
+2019-05-03 09:40:02,293 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_8
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - value is ::password
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_8
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - value is ::Plant
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_8
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - value is ::line
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_8
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - value is ::shift
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_9
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - value is ::PlantManagerTest1
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_9
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_9
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - value is ::Texas
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_9
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - value is ::2
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_9
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - value is ::2
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_10
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - value is ::PlantManagerTest2
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_10
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_10
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - value is ::Corsicanna
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_10
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - value is ::25
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_10
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - value is ::3
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_11
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - value is ::PlantManagerTest3
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_11
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_11
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - value is ::Mooresville
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_11
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - value is ::40
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_11
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - value is ::2
+2019-05-03 09:40:02,308 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_12
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::PlantManagerTest4
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_12
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_12
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::Mt Carmel
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_12
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::72
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_12
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::3
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_13
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_13
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_13
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_13
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_13
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_14
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_14
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_14
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_14
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_14
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_15
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::Successful log into DMG application and verify Add New Plant
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_15
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_15
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_15
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_15
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_16
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::username
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_16
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::password
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_16
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_16
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_16
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_17
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::DMGAdminTest
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_17
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_17
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_17
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_17
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:02,324 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome
+2019-05-03 09:40:06,928 [main] INFO com.pactiv.utils.TestDataUtils - Access the PACTIV URL::PASS
+2019-05-03 09:40:06,943 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-userid')]
+2019-05-03 09:40:12,376 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-password')]
+2019-05-03 09:40:17,867 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@value,'Submit')]
+2019-05-03 09:40:26,783 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:40:26,816 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:40:26,863 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:40:26,910 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:40:27,270 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //button[contains(@class,'button-element textsize-normal')]
+2019-05-03 09:40:32,475 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - Current scenario status is::null
+2019-05-03 09:40:33,168 [main] INFO com.pactiv.config.SeleniumNGSuite - Successfully closed the browser 
+2019-05-03 09:40:43,269 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome headless
+2019-05-03 09:40:49,386 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - In before step definition for scenario::Successful log into CPT application with Valid Credentials as Plant Leadership
+2019-05-03 09:40:49,386 [main] INFO com.pactiv.utils.TestDataUtils - ===== Reading Feature Details====
+2019-05-03 09:40:49,386 [main] INFO com.pactiv.utils.TestDataUtils - Scenario::cucumber.runtime.ScenarioImpl@1a2909ae
+2019-05-03 09:40:49,386 [main] INFO com.pactiv.utils.TestDataUtils - Scenario name::Successful log into CPT application with Valid Credentials as Plant Leadership
+2019-05-03 09:40:49,386 [main] INFO com.pactiv.utils.TestDataUtils - ****************
+2019-05-03 09:40:49,386 [main] INFO com.pactiv.utils.TestDataUtils - Scenario Name:Successful log into CPT application with Valid Credentials as Plant Leadership
+2019-05-03 09:40:49,386 [main] INFO com.pactiv.utils.TestDataUtils - feature file Name:loginaction
+2019-05-03 09:40:49,386 [main] INFO com.pactiv.utils.TestDataUtils - ------------
+2019-05-03 09:40:49,386 [main] INFO com.pactiv.utils.TestDataUtils - Scenario_id:Successful log into CPT application with Valid Credentials as Plant Leadership
+2019-05-03 09:40:49,464 [main] INFO com.pactiv.utils.TestDataUtils - SheetName is: LoginAction
+2019-05-03 09:40:49,464 [main] INFO com.pactiv.utils.TestDataUtils - Row is: 16Column is: 0
+2019-05-03 09:40:49,464 [main] INFO com.pactiv.utils.TestDataUtils - no of cells 1::5
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - header::[username, password, Plant, line, shift]
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - no of rows::9
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_1
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::PlantManagerTest1
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_1
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_1
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::Texas
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_1
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::2
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_1
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::2
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_2
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::PlantManagerTest2
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_2
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_2
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::Corsicanna
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_2
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::25
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_2
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::3
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_3
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::PlantManagerTest3
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_3
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_3
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::Mooresville
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_3
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::40
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_3
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::2
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_4
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::PlantManagerTest4
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_4
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_4
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::Mt Carmel
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_4
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::72
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_4
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::3
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_5
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_5
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_5
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_5
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_5
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_6
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_6
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_6
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_6
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_6
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_7
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::Successful log into DMG application and verify Add New Plant
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_7
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_7
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_7
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_7
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_8
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::username
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_8
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::password
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_8
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_8
+2019-05-03 09:40:49,479 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:49,495 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_8
+2019-05-03 09:40:49,495 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:49,495 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_9
+2019-05-03 09:40:49,495 [main] INFO com.pactiv.utils.TestDataUtils - value is ::DMGAdminTest
+2019-05-03 09:40:49,495 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_9
+2019-05-03 09:40:49,495 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:40:49,495 [main] INFO com.pactiv.utils.TestDataUtils - key is ::Plant_9
+2019-05-03 09:40:49,495 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:49,495 [main] INFO com.pactiv.utils.TestDataUtils - key is ::line_9
+2019-05-03 09:40:49,495 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:49,495 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_9
+2019-05-03 09:40:49,495 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:40:49,495 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome
+2019-05-03 09:40:54,196 [main] INFO com.pactiv.utils.TestDataUtils - Access the PACTIV URL::PASS
+2019-05-03 09:40:54,211 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-userid')]
+2019-05-03 09:40:59,702 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-password')]
+2019-05-03 09:41:05,040 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@value,'Submit')]
+2019-05-03 09:41:13,180 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:41:13,258 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:41:13,321 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:41:13,774 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //button[contains(@class,'button-element textsize-normal')]
+2019-05-03 09:41:19,043 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - Current scenario status is::null
+2019-05-03 09:41:19,746 [main] INFO com.pactiv.config.SeleniumNGSuite - Successfully closed the browser 
+2019-05-03 09:41:29,843 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome headless
+2019-05-03 09:41:35,919 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - In before step definition for scenario::Successful log into DMG application and verify Add New Plant
+2019-05-03 09:41:35,935 [main] INFO com.pactiv.utils.TestDataUtils - ===== Reading Feature Details====
+2019-05-03 09:41:35,935 [main] INFO com.pactiv.utils.TestDataUtils - Scenario::cucumber.runtime.ScenarioImpl@35eb4a3b
+2019-05-03 09:41:35,935 [main] INFO com.pactiv.utils.TestDataUtils - Scenario name::Successful log into DMG application and verify Add New Plant
+2019-05-03 09:41:35,935 [main] INFO com.pactiv.utils.TestDataUtils - ****************
+2019-05-03 09:41:35,935 [main] INFO com.pactiv.utils.TestDataUtils - Scenario Name:Successful log into DMG application and verify Add New Plant
+2019-05-03 09:41:35,935 [main] INFO com.pactiv.utils.TestDataUtils - feature file Name:loginaction
+2019-05-03 09:41:35,935 [main] INFO com.pactiv.utils.TestDataUtils - ------------
+2019-05-03 09:41:35,935 [main] INFO com.pactiv.utils.TestDataUtils - Scenario_id:Successful log into DMG application and verify Add New Plant
+2019-05-03 09:41:35,997 [main] INFO com.pactiv.utils.TestDataUtils - SheetName is: LoginAction
+2019-05-03 09:41:35,997 [main] INFO com.pactiv.utils.TestDataUtils - Row is: 24Column is: 0
+2019-05-03 09:41:35,997 [main] INFO com.pactiv.utils.TestDataUtils - no of cells 1::2
+2019-05-03 09:41:36,013 [main] INFO com.pactiv.utils.TestDataUtils - header::[username, password]
+2019-05-03 09:41:36,013 [main] INFO com.pactiv.utils.TestDataUtils - no of rows::1
+2019-05-03 09:41:36,013 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_1
+2019-05-03 09:41:36,013 [main] INFO com.pactiv.utils.TestDataUtils - value is ::DMGAdminTest
+2019-05-03 09:41:36,013 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_1
+2019-05-03 09:41:36,013 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:41:36,013 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome
+2019-05-03 09:41:40,558 [main] INFO com.pactiv.utils.TestDataUtils - Access the PACTIV URL::PASS
+2019-05-03 09:41:40,574 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-userid')]
+2019-05-03 09:41:45,981 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-password')]
+2019-05-03 09:41:51,284 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@value,'Submit')]
+2019-05-03 09:41:59,588 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:41:59,713 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:41:59,728 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //strong[contains(.,'ADD PLANT')]
+2019-05-03 09:42:04,901 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:42:04,963 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:42:05,010 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:42:05,039 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:42:05,102 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:42:05,164 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:42:05,211 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:42:05,289 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //div[text()='Add a New Plant']/../div/img[contains(@src,'left-arrow')]
+2019-05-03 09:42:10,606 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //button[contains(@class,'button-element textsize-normal')]
+2019-05-03 09:42:15,786 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - Current scenario status is::null
+2019-05-03 09:42:16,447 [main] INFO com.pactiv.config.SeleniumNGSuite - Successfully closed the browser 
+2019-05-03 09:42:26,536 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome headless
+2019-05-03 09:42:32,480 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - In before step definition for scenario::Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-03 09:42:32,480 [main] INFO com.pactiv.utils.TestDataUtils - ===== Reading Feature Details====
+2019-05-03 09:42:32,480 [main] INFO com.pactiv.utils.TestDataUtils - Scenario::cucumber.runtime.ScenarioImpl@5a2fa51f
+2019-05-03 09:42:32,480 [main] INFO com.pactiv.utils.TestDataUtils - Scenario name::Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-03 09:42:32,480 [main] INFO com.pactiv.utils.TestDataUtils - ****************
+2019-05-03 09:42:32,480 [main] INFO com.pactiv.utils.TestDataUtils - Scenario Name:Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-03 09:42:32,497 [main] INFO com.pactiv.utils.TestDataUtils - feature file Name:loginaction
+2019-05-03 09:42:32,497 [main] INFO com.pactiv.utils.TestDataUtils - ------------
+2019-05-03 09:42:32,497 [main] INFO com.pactiv.utils.TestDataUtils - Scenario_id:Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-03 09:42:32,542 [main] INFO com.pactiv.utils.TestDataUtils - SheetName is: LoginAction
+2019-05-03 09:42:32,558 [main] INFO com.pactiv.utils.TestDataUtils - Row is: 28Column is: 0
+2019-05-03 09:42:32,558 [main] INFO com.pactiv.utils.TestDataUtils - no of cells 1::2
+2019-05-03 09:42:32,558 [main] INFO com.pactiv.utils.TestDataUtils - header::[username, password]
+2019-05-03 09:42:32,558 [main] INFO com.pactiv.utils.TestDataUtils - no of rows::4
+2019-05-03 09:42:32,558 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_1
+2019-05-03 09:42:32,558 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest1
+2019-05-03 09:42:32,558 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_1
+2019-05-03 09:42:32,558 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:42:32,558 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_2
+2019-05-03 09:42:32,558 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest2
+2019-05-03 09:42:32,558 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_2
+2019-05-03 09:42:32,558 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:42:32,558 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_3
+2019-05-03 09:42:32,558 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest3
+2019-05-03 09:42:32,558 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_3
+2019-05-03 09:42:32,558 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:42:32,558 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_4
+2019-05-03 09:42:32,558 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest4
+2019-05-03 09:42:32,558 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_4
+2019-05-03 09:42:32,558 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:42:32,558 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome
+2019-05-03 09:42:37,123 [main] INFO com.pactiv.utils.TestDataUtils - Access the PACTIV URL::PASS
+2019-05-03 09:42:37,140 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-userid')]
+2019-05-03 09:42:42,605 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-password')]
+2019-05-03 09:42:47,963 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@value,'Submit')]
+2019-05-03 09:42:56,261 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:42:56,339 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:43:01,438 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - Current scenario status is::null
+2019-05-03 09:43:02,126 [main] INFO com.pactiv.config.SeleniumNGSuite - Successfully closed the browser 
+2019-05-03 09:43:12,206 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome headless
+2019-05-03 09:43:18,033 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - In before step definition for scenario::Successful log into CPT application as Supervisor And Verify PT Hour Box Entry
+2019-05-03 09:43:18,033 [main] INFO com.pactiv.utils.TestDataUtils - ===== Reading Feature Details====
+2019-05-03 09:43:18,033 [main] INFO com.pactiv.utils.TestDataUtils - Scenario::cucumber.runtime.ScenarioImpl@18da4dd
+2019-05-03 09:43:18,033 [main] INFO com.pactiv.utils.TestDataUtils - Scenario name::Successful log into CPT application as Supervisor And Verify PT Hour Box Entry
+2019-05-03 09:43:18,033 [main] INFO com.pactiv.utils.TestDataUtils - ****************
+2019-05-03 09:43:18,033 [main] INFO com.pactiv.utils.TestDataUtils - Scenario Name:Successful log into CPT application as Supervisor And Verify PT Hour Box Entry
+2019-05-03 09:43:18,033 [main] INFO com.pactiv.utils.TestDataUtils - feature file Name:loginaction
+2019-05-03 09:43:18,033 [main] INFO com.pactiv.utils.TestDataUtils - ------------
+2019-05-03 09:43:18,033 [main] INFO com.pactiv.utils.TestDataUtils - Scenario_id:Successful log into CPT application as Supervisor And Verify PT Hour Box Entry
+2019-05-03 09:43:18,080 [main] INFO com.pactiv.utils.TestDataUtils - SheetName is: LoginAction
+2019-05-03 09:43:18,080 [main] INFO com.pactiv.utils.TestDataUtils - Row is: 35Column is: 0
+2019-05-03 09:43:18,080 [main] INFO com.pactiv.utils.TestDataUtils - no of cells 1::2
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - header::[username, password]
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - no of rows::16
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_1
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest1
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_1
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_2
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest2
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_2
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_3
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest3
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_3
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_4
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest4
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_4
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_5
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_5
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_6
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_6
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_7
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_7
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_8
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_8
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_9
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_9
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_10
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_10
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_11
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_11
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_12
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_12
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_13
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_13
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_14
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_14
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_15
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_15
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_16
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_16
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.utils.TestDataUtils - value is ::
+2019-05-03 09:43:18,095 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome
+2019-05-03 09:43:22,970 [main] INFO com.pactiv.utils.TestDataUtils - Access the PACTIV URL::PASS
+2019-05-03 09:43:23,001 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-userid')]
+2019-05-03 09:43:28,412 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-password')]
+2019-05-03 09:43:33,725 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@value,'Submit')]
+2019-05-03 09:43:42,307 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:43:42,385 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-03 09:43:47,428 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - Current scenario status is::null
+2019-05-03 09:43:48,068 [main] INFO com.pactiv.config.SeleniumNGSuite - Successfully closed the browser 
+2019-05-03 09:43:58,141 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome headless

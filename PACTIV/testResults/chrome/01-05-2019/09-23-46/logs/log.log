@@ -1,0 +1,42 @@
+2019-05-01 09:23:46,906 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - In before step definition for scenario::Successful log into DMG application and verify Add New Plant
+2019-05-01 09:23:46,912 [main] INFO com.pactiv.utils.TestDataUtils - ===== Reading Feature Details====
+2019-05-01 09:23:46,912 [main] INFO com.pactiv.utils.TestDataUtils - Scenario::cucumber.runtime.ScenarioImpl@700fb871
+2019-05-01 09:23:46,912 [main] INFO com.pactiv.utils.TestDataUtils - Scenario name::Successful log into DMG application and verify Add New Plant
+2019-05-01 09:23:46,913 [main] INFO com.pactiv.utils.TestDataUtils - ****************
+2019-05-01 09:23:46,913 [main] INFO com.pactiv.utils.TestDataUtils - Scenario Name:Successful log into DMG application and verify Add New Plant
+2019-05-01 09:23:46,914 [main] INFO com.pactiv.utils.TestDataUtils - feature file Name:loginaction
+2019-05-01 09:23:46,915 [main] INFO com.pactiv.utils.TestDataUtils - ------------
+2019-05-01 09:23:46,915 [main] INFO com.pactiv.utils.TestDataUtils - Scenario_id:Successful log into DMG application and verify Add New Plant
+2019-05-01 09:23:48,186 [main] INFO com.pactiv.utils.TestDataUtils - SheetName is: LoginAction
+2019-05-01 09:23:48,225 [main] INFO com.pactiv.utils.TestDataUtils - Row is: 24Column is: 0
+2019-05-01 09:23:48,225 [main] INFO com.pactiv.utils.TestDataUtils - no of cells 1::2
+2019-05-01 09:23:48,253 [main] INFO com.pactiv.utils.TestDataUtils - header::[username, password]
+2019-05-01 09:23:48,253 [main] INFO com.pactiv.utils.TestDataUtils - no of rows::1
+2019-05-01 09:23:48,254 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_1
+2019-05-01 09:23:48,254 [main] INFO com.pactiv.utils.TestDataUtils - value is ::DMGAdminTest
+2019-05-01 09:23:48,257 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_1
+2019-05-01 09:23:48,257 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-01 09:23:48,554 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome
+2019-05-01 09:23:58,243 [main] INFO com.pactiv.utils.TestDataUtils - Access the PACTIV URL::PASS
+2019-05-01 09:23:58,246 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-01 09:23:58,267 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-userid')]
+2019-05-01 09:24:03,732 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-password')]
+2019-05-01 09:24:09,113 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@value,'Submit')]
+2019-05-01 09:24:19,789 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-01 09:24:19,793 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-01 09:24:19,879 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-01 09:24:19,885 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //strong[contains(.,'ADD PLANT')]
+2019-05-01 09:24:25,051 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-01 09:24:25,091 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ControlTower.property
+2019-05-01 09:24:25,104 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ReportLog.property
+2019-05-01 09:24:25,113 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-01 09:24:25,154 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-01 09:24:25,192 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-01 09:24:25,229 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-01 09:24:25,266 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-01 09:24:25,301 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-01 09:24:25,345 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //div[text()='Add a New Plant']/../div/img[contains(@src,'left-arrow')]
+2019-05-01 09:24:30,589 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //button[contains(@class,'button-element textsize-normal')]
+2019-05-01 09:24:35,923 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - Current scenario status is::null
+2019-05-01 09:24:37,244 [main] INFO com.pactiv.config.SeleniumNGSuite - Successfully closed the browser 
+2019-05-01 09:24:47,288 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome

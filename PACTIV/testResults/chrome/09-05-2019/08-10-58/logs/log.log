@@ -1,0 +1,173 @@
+2019-05-09 08:10:59,963 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - In before step definition for scenario::Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-09 08:10:59,963 [main] INFO com.pactiv.utils.TestDataUtils - ===== Reading Feature Details====
+2019-05-09 08:10:59,963 [main] INFO com.pactiv.utils.TestDataUtils - Scenario::cucumber.runtime.ScenarioImpl@13d73f29
+2019-05-09 08:10:59,963 [main] INFO com.pactiv.utils.TestDataUtils - Scenario name::Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-09 08:10:59,979 [main] INFO com.pactiv.utils.TestDataUtils - ****************
+2019-05-09 08:10:59,979 [main] INFO com.pactiv.utils.TestDataUtils - Scenario Name:Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-09 08:10:59,979 [main] INFO com.pactiv.utils.TestDataUtils - feature file Name:loginaction
+2019-05-09 08:10:59,979 [main] INFO com.pactiv.utils.TestDataUtils - ------------
+2019-05-09 08:10:59,979 [main] INFO com.pactiv.utils.TestDataUtils - Scenario_id:Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-09 08:11:01,261 [main] INFO com.pactiv.utils.TestDataUtils - SheetName is: LoginAction
+2019-05-09 08:11:01,303 [main] INFO com.pactiv.utils.TestDataUtils - Row is: 28Column is: 0
+2019-05-09 08:11:01,303 [main] INFO com.pactiv.utils.TestDataUtils - no of cells 1::2
+2019-05-09 08:11:01,303 [main] INFO com.pactiv.utils.TestDataUtils - header::[username, password]
+2019-05-09 08:11:01,303 [main] INFO com.pactiv.utils.TestDataUtils - no of rows::4
+2019-05-09 08:11:01,303 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_1
+2019-05-09 08:11:01,318 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest1
+2019-05-09 08:11:01,318 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_1
+2019-05-09 08:11:01,318 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-09 08:11:01,318 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_2
+2019-05-09 08:11:01,318 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest2
+2019-05-09 08:11:01,318 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_2
+2019-05-09 08:11:01,318 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-09 08:11:01,318 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_3
+2019-05-09 08:11:01,318 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest3
+2019-05-09 08:11:01,318 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_3
+2019-05-09 08:11:01,318 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-09 08:11:01,318 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_4
+2019-05-09 08:11:01,318 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest4
+2019-05-09 08:11:01,318 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_4
+2019-05-09 08:11:01,318 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-09 08:11:01,631 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome
+2019-05-09 08:11:12,294 [main] INFO com.pactiv.utils.TestDataUtils - Access the PACTIV URL::PASS
+2019-05-09 08:11:12,303 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-09 08:11:12,335 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-userid')]
+2019-05-09 08:11:17,976 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-password')]
+2019-05-09 08:11:23,438 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@value,'Submit')]
+2019-05-09 08:11:32,523 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-09 08:11:32,531 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-09 08:11:32,802 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-09 08:11:32,803 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ControlTower.property
+2019-05-09 08:11:32,829 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ReportLog.property
+2019-05-09 08:11:32,838 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-09 08:11:37,925 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - Current scenario status is::null
+2019-05-09 08:11:38,647 [main] INFO com.pactiv.config.SeleniumNGSuite - Successfully closed the browser 
+2019-05-09 08:11:49,424 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome headless
+2019-05-09 08:11:55,978 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - In before step definition for scenario::Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-09 08:11:55,986 [main] INFO com.pactiv.utils.TestDataUtils - ===== Reading Feature Details====
+2019-05-09 08:11:55,986 [main] INFO com.pactiv.utils.TestDataUtils - Scenario::cucumber.runtime.ScenarioImpl@33364212
+2019-05-09 08:11:55,986 [main] INFO com.pactiv.utils.TestDataUtils - Scenario name::Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-09 08:11:55,986 [main] INFO com.pactiv.utils.TestDataUtils - ****************
+2019-05-09 08:11:55,988 [main] INFO com.pactiv.utils.TestDataUtils - Scenario Name:Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-09 08:11:55,988 [main] INFO com.pactiv.utils.TestDataUtils - feature file Name:loginaction
+2019-05-09 08:11:55,988 [main] INFO com.pactiv.utils.TestDataUtils - ------------
+2019-05-09 08:11:55,988 [main] INFO com.pactiv.utils.TestDataUtils - Scenario_id:Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-09 08:11:56,050 [main] INFO com.pactiv.utils.TestDataUtils - SheetName is: LoginAction
+2019-05-09 08:11:56,050 [main] INFO com.pactiv.utils.TestDataUtils - Row is: 28Column is: 0
+2019-05-09 08:11:56,050 [main] INFO com.pactiv.utils.TestDataUtils - no of cells 1::2
+2019-05-09 08:11:56,066 [main] INFO com.pactiv.utils.TestDataUtils - header::[username, password]
+2019-05-09 08:11:56,066 [main] INFO com.pactiv.utils.TestDataUtils - no of rows::4
+2019-05-09 08:11:56,066 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_1
+2019-05-09 08:11:56,066 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest1
+2019-05-09 08:11:56,066 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_1
+2019-05-09 08:11:56,066 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-09 08:11:56,066 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_2
+2019-05-09 08:11:56,066 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest2
+2019-05-09 08:11:56,066 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_2
+2019-05-09 08:11:56,066 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-09 08:11:56,066 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_3
+2019-05-09 08:11:56,066 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest3
+2019-05-09 08:11:56,066 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_3
+2019-05-09 08:11:56,066 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-09 08:11:56,066 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_4
+2019-05-09 08:11:56,066 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest4
+2019-05-09 08:11:56,066 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_4
+2019-05-09 08:11:56,066 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-09 08:11:56,066 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome
+2019-05-09 08:12:01,073 [main] INFO com.pactiv.utils.TestDataUtils - Access the PACTIV URL::PASS
+2019-05-09 08:12:01,101 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-userid')]
+2019-05-09 08:12:06,699 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-password')]
+2019-05-09 08:12:13,240 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@value,'Submit')]
+2019-05-09 08:12:21,629 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-09 08:12:21,632 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-09 08:12:22,234 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-09 08:12:22,234 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-09 08:12:27,283 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - Current scenario status is::null
+2019-05-09 08:12:27,973 [main] INFO com.pactiv.config.SeleniumNGSuite - Successfully closed the browser 
+2019-05-09 08:12:38,081 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome headless
+2019-05-09 08:12:44,525 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - In before step definition for scenario::Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-09 08:12:44,538 [main] INFO com.pactiv.utils.TestDataUtils - ===== Reading Feature Details====
+2019-05-09 08:12:44,538 [main] INFO com.pactiv.utils.TestDataUtils - Scenario::cucumber.runtime.ScenarioImpl@47ad69f7
+2019-05-09 08:12:44,538 [main] INFO com.pactiv.utils.TestDataUtils - Scenario name::Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-09 08:12:44,538 [main] INFO com.pactiv.utils.TestDataUtils - ****************
+2019-05-09 08:12:44,538 [main] INFO com.pactiv.utils.TestDataUtils - Scenario Name:Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-09 08:12:44,538 [main] INFO com.pactiv.utils.TestDataUtils - feature file Name:loginaction
+2019-05-09 08:12:44,538 [main] INFO com.pactiv.utils.TestDataUtils - ------------
+2019-05-09 08:12:44,539 [main] INFO com.pactiv.utils.TestDataUtils - Scenario_id:Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-09 08:12:44,587 [main] INFO com.pactiv.utils.TestDataUtils - SheetName is: LoginAction
+2019-05-09 08:12:44,587 [main] INFO com.pactiv.utils.TestDataUtils - Row is: 28Column is: 0
+2019-05-09 08:12:44,587 [main] INFO com.pactiv.utils.TestDataUtils - no of cells 1::2
+2019-05-09 08:12:44,587 [main] INFO com.pactiv.utils.TestDataUtils - header::[username, password]
+2019-05-09 08:12:44,587 [main] INFO com.pactiv.utils.TestDataUtils - no of rows::4
+2019-05-09 08:12:44,587 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_1
+2019-05-09 08:12:44,587 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest1
+2019-05-09 08:12:44,587 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_1
+2019-05-09 08:12:44,587 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-09 08:12:44,587 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_2
+2019-05-09 08:12:44,587 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest2
+2019-05-09 08:12:44,587 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_2
+2019-05-09 08:12:44,587 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-09 08:12:44,587 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_3
+2019-05-09 08:12:44,587 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest3
+2019-05-09 08:12:44,587 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_3
+2019-05-09 08:12:44,587 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-09 08:12:44,587 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_4
+2019-05-09 08:12:44,587 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest4
+2019-05-09 08:12:44,587 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_4
+2019-05-09 08:12:44,587 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-09 08:12:44,602 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome
+2019-05-09 08:12:49,442 [main] INFO com.pactiv.utils.TestDataUtils - Access the PACTIV URL::PASS
+2019-05-09 08:12:49,468 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-userid')]
+2019-05-09 08:12:55,020 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-password')]
+2019-05-09 08:13:00,508 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@value,'Submit')]
+2019-05-09 08:13:09,553 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-09 08:13:09,555 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-09 08:13:10,198 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-09 08:13:10,199 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-09 08:13:15,285 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - Current scenario status is::null
+2019-05-09 08:13:15,977 [main] INFO com.pactiv.config.SeleniumNGSuite - Successfully closed the browser 
+2019-05-09 08:13:26,078 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome headless
+2019-05-09 08:13:32,379 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - In before step definition for scenario::Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-09 08:13:32,391 [main] INFO com.pactiv.utils.TestDataUtils - ===== Reading Feature Details====
+2019-05-09 08:13:32,391 [main] INFO com.pactiv.utils.TestDataUtils - Scenario::cucumber.runtime.ScenarioImpl@479f2dc2
+2019-05-09 08:13:32,391 [main] INFO com.pactiv.utils.TestDataUtils - Scenario name::Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-09 08:13:32,392 [main] INFO com.pactiv.utils.TestDataUtils - ****************
+2019-05-09 08:13:32,392 [main] INFO com.pactiv.utils.TestDataUtils - Scenario Name:Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-09 08:13:32,392 [main] INFO com.pactiv.utils.TestDataUtils - feature file Name:loginaction
+2019-05-09 08:13:32,392 [main] INFO com.pactiv.utils.TestDataUtils - ------------
+2019-05-09 08:13:32,392 [main] INFO com.pactiv.utils.TestDataUtils - Scenario_id:Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-09 08:13:32,426 [main] INFO com.pactiv.utils.TestDataUtils - SheetName is: LoginAction
+2019-05-09 08:13:32,426 [main] INFO com.pactiv.utils.TestDataUtils - Row is: 28Column is: 0
+2019-05-09 08:13:32,426 [main] INFO com.pactiv.utils.TestDataUtils - no of cells 1::2
+2019-05-09 08:13:32,426 [main] INFO com.pactiv.utils.TestDataUtils - header::[username, password]
+2019-05-09 08:13:32,426 [main] INFO com.pactiv.utils.TestDataUtils - no of rows::4
+2019-05-09 08:13:32,426 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_1
+2019-05-09 08:13:32,441 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest1
+2019-05-09 08:13:32,441 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_1
+2019-05-09 08:13:32,441 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-09 08:13:32,441 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_2
+2019-05-09 08:13:32,441 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest2
+2019-05-09 08:13:32,441 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_2
+2019-05-09 08:13:32,441 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-09 08:13:32,441 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_3
+2019-05-09 08:13:32,441 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest3
+2019-05-09 08:13:32,441 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_3
+2019-05-09 08:13:32,441 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-09 08:13:32,441 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_4
+2019-05-09 08:13:32,441 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest4
+2019-05-09 08:13:32,441 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_4
+2019-05-09 08:13:32,441 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-09 08:13:32,441 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome
+2019-05-09 08:13:37,226 [main] INFO com.pactiv.utils.TestDataUtils - Access the PACTIV URL::PASS
+2019-05-09 08:13:37,252 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-userid')]
+2019-05-09 08:13:42,840 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-password')]
+2019-05-09 08:13:48,291 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@value,'Submit')]
+2019-05-09 08:13:57,573 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-09 08:13:57,575 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-09 08:13:57,639 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-09 08:13:57,639 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-09 08:13:57,707 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-09 08:13:57,712 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //div[contains(@class,'shift-box')][contains(text(),'pending')]
+2019-05-09 08:14:02,985 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - Current scenario status is::null
+2019-05-09 08:14:03,680 [main] INFO com.pactiv.config.SeleniumNGSuite - Successfully closed the browser 
+2019-05-09 08:14:13,793 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome headless

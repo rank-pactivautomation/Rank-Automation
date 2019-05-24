@@ -1,0 +1,111 @@
+2019-05-21 02:47:36,439 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - In before step definition for scenario::Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-21 02:47:36,439 [main] INFO com.pactiv.utils.TestDataUtils - ===== Reading Feature Details====
+2019-05-21 02:47:36,439 [main] INFO com.pactiv.utils.TestDataUtils - Scenario::cucumber.runtime.ScenarioImpl@13526e59
+2019-05-21 02:47:36,439 [main] INFO com.pactiv.utils.TestDataUtils - Scenario name::Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-21 02:47:36,439 [main] INFO com.pactiv.utils.TestDataUtils - ****************
+2019-05-21 02:47:36,439 [main] INFO com.pactiv.utils.TestDataUtils - Scenario Name:Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-21 02:47:36,439 [main] INFO com.pactiv.utils.TestDataUtils - feature file Name:loginaction
+2019-05-21 02:47:36,439 [main] INFO com.pactiv.utils.TestDataUtils - ------------
+2019-05-21 02:47:36,439 [main] INFO com.pactiv.utils.TestDataUtils - Scenario_id:Successful log into CPT application as Floater And Verify PT Hour Box Entry
+2019-05-21 02:47:37,658 [main] INFO com.pactiv.utils.TestDataUtils - SheetName is: LoginAction
+2019-05-21 02:47:37,682 [main] INFO com.pactiv.utils.TestDataUtils - Row is: 28Column is: 0
+2019-05-21 02:47:37,682 [main] INFO com.pactiv.utils.TestDataUtils - no of cells 1::2
+2019-05-21 02:47:37,697 [main] INFO com.pactiv.utils.TestDataUtils - header::[username, password]
+2019-05-21 02:47:37,697 [main] INFO com.pactiv.utils.TestDataUtils - no of rows::4
+2019-05-21 02:47:37,697 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_1
+2019-05-21 02:47:37,697 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest1
+2019-05-21 02:47:37,697 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_1
+2019-05-21 02:47:37,697 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-21 02:47:37,697 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_2
+2019-05-21 02:47:37,697 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest2
+2019-05-21 02:47:37,697 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_2
+2019-05-21 02:47:37,697 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-21 02:47:37,697 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_3
+2019-05-21 02:47:37,697 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest3
+2019-05-21 02:47:37,697 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_3
+2019-05-21 02:47:37,697 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-21 02:47:37,697 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_4
+2019-05-21 02:47:37,697 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest4
+2019-05-21 02:47:37,697 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_4
+2019-05-21 02:47:37,697 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-21 02:47:37,947 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-21 02:47:37,963 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-21 02:47:37,963 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome
+2019-05-21 02:47:47,614 [main] INFO com.pactiv.utils.TestDataUtils - Access the PACTIV URL::PASS
+2019-05-21 02:47:47,617 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-userid')]
+2019-05-21 02:47:47,952 [main] INFO com.pactiv.utils.DriverUtilsImpl - In sendText():: Entering FloaterTest2 in By.xpath: //input[contains(@name,'thingworx-form-userid')]
+2019-05-21 02:47:48,201 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-password')]
+2019-05-21 02:47:48,615 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@value,'Submit')]
+2019-05-21 02:47:52,571 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-21 02:47:52,581 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-21 02:47:52,583 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-21 02:47:53,639 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-21 02:47:53,639 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ControlTower.property
+2019-05-21 02:47:53,652 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ReportLog.property
+2019-05-21 02:47:53,660 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-21 02:47:53,661 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-21 02:47:53,662 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-21 02:47:58,847 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.id: shift-dd
+2019-05-21 02:48:01,472 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-21 02:48:01,480 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-21 02:48:01,481 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-21 02:48:01,482 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-21 02:48:01,482 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-21 02:48:01,482 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //div[contains(@class,'shift-box')][contains(text(),'pending')]
+2019-05-21 02:48:02,249 [main] INFO com.pactiv.utils.DriverUtilsImpl - In sendText():: Entering 120 in By.xpath: //input[contains(@class,'actual-cases-input')]
+2019-05-21 02:48:02,547 [main] INFO com.pactiv.utils.DriverUtilsImpl - Before Pressing Tab
+2019-05-21 02:48:02,664 [main] INFO com.pactiv.utils.DriverUtilsImpl - After Pressing Tab
+2019-05-21 02:48:02,664 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //div[@class='popup-btn save-button']
+2019-05-21 02:48:07,760 [main] ERROR com.pactiv.exception.PactivException - no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='popup-btn save-button']"}
+  (Session info: chrome=74.0.3729.157)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.5.1', revision: '9c21bb67ef', time: '2017-08-17T15:26:08.955Z'
+System info: host: 'PVLDCTWF90', ip: '10.0.9.65', os.name: 'Windows Server 2016', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:2120}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}), userDataDir=C:\Users\pzm6015\AppData\Local\Temp\3\scoped_dir10368_31709}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=ignore, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=74.0.3729.157, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 6bea72c063c64d437f5a403014f54822
+*** Element info: {Using=xpath, value=//div[@class='popup-btn save-button']}
+2019-05-21 02:48:07,761 [main] ERROR com.pactiv.exception.PactivException - null
+2019-05-21 02:48:07,761 [main] ERROR com.pactiv.utils.DriverUtilsImpl - Printing error : null
+2019-05-21 02:48:07,761 [main] ERROR com.pactiv.exception.PactivException - gClick Exception
+2019-05-21 02:48:07,761 [main] ERROR com.pactiv.exception.PactivException - gClick Exception
+2019-05-21 02:48:08,294 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-21 02:48:08,294 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\\src\\test\\resources\\properties\\DMGApp.property
+2019-05-21 02:48:08,294 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\ProductionTracking.property
+2019-05-21 02:48:08,294 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-21 02:48:08,405 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //div[contains(@class,'shift-box')][contains(text(),'pending')]
+2019-05-21 02:48:08,653 [main] ERROR com.pactiv.utils.DriverUtilsImpl - Printing error : element click intercepted: Element <div class="shift-box yellow-bg">...</div> is not clickable at point (883, 370). Other element would receive the click: <div class="diagnosis-selected-row-list-selector dropdown-theme dropdown-unselectable" data-selectedvalue="" data-isselectable="true">...</div>
+  (Session info: chrome=74.0.3729.157)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.5.1', revision: '9c21bb67ef', time: '2017-08-17T15:26:08.955Z'
+System info: host: 'PVLDCTWF90', ip: '10.0.9.65', os.name: 'Windows Server 2016', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:2120}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}), userDataDir=C:\Users\pzm6015\AppData\Local\Temp\3\scoped_dir10368_31709}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=ignore, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=74.0.3729.157, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 6bea72c063c64d437f5a403014f54822
+2019-05-21 02:48:08,653 [main] ERROR com.pactiv.exception.PactivException - gClick Exception
+2019-05-21 02:48:08,653 [main] ERROR com.pactiv.exception.PactivException - gClick Exception
+2019-05-21 02:48:09,282 [main] INFO com.pactiv.utils.DriverUtilsImpl - In sendText():: Entering 115 in By.xpath: //input[contains(@class,'actual-cases-input')]
+2019-05-21 02:48:09,602 [main] INFO com.pactiv.utils.DriverUtilsImpl - Before Pressing Tab
+2019-05-21 02:48:09,738 [main] INFO com.pactiv.utils.DriverUtilsImpl - After Pressing Tab
+2019-05-21 02:48:09,893 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //span[contains(text(),'Add Diagnosis')]
+2019-05-21 02:48:10,166 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //div[contains(@class,'diagnosis-row')]//ul/li[1]
+2019-05-21 02:48:30,450 [main] ERROR com.pactiv.utils.DriverUtilsImpl - Printing error : Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on XP (6bea72c063c64d437f5a403014f54822)] -> xpath: //div[contains(@class,'diagnosis-row')]//ul/li[1]] (tried for 20 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.5.1', revision: '9c21bb67ef', time: '2017-08-17T15:26:08.955Z'
+System info: host: 'PVLDCTWF90', ip: '10.0.9.65', os.name: 'Windows Server 2016', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: com.sun.proxy.$Proxy13
+2019-05-21 02:48:30,450 [main] ERROR com.pactiv.exception.PactivException - gClick Exception
+2019-05-21 02:48:30,450 [main] ERROR com.pactiv.exception.PactivException - gClick Exception
+2019-05-21 02:48:31,015 [main] ERROR com.pactiv.exception.PactivException - gClick Exception
+2019-05-21 02:48:31,015 [main] ERROR com.pactiv.exception.PactivException - gClick Exception
+2019-05-21 02:48:31,015 [main] ERROR com.pactiv.exception.PactivException - gClick Exception
+2019-05-21 02:48:31,015 [main] ERROR com.pactiv.exception.PactivException - gClick Exception
+2019-05-21 02:48:31,015 [main] ERROR com.pactiv.exception.PactivException - null
+2019-05-21 02:48:31,030 [main] ERROR com.pactiv.exception.PactivException - gClick Exception
+2019-05-21 02:48:31,718 [main] INFO com.pactiv.config.SeleniumNGSuite - Successfully closed the browser 
+2019-05-21 02:48:32,225 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - Current scenario status is::null
+2019-05-21 02:48:42,338 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome headless
+2019-05-21 02:48:48,893 [main] ERROR com.pactiv.exception.PactivException - null
+2019-05-21 02:48:48,893 [main] ERROR com.pactiv.exception.PactivException - gClick Exception

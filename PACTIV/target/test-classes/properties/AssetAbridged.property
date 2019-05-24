@@ -1,0 +1,10 @@
+ABRIDGEDVIEW_EXPANDICON=//div[contains(@id,'root_pagemashupcontainer-6_mashupcontainer-4_mashupcontainer-4_navigation-116')]//button
+BLENDERDETAILEDVIEW_HEADER=//span[contains(@class,'label-text textsize-24px')]
+BLENDER13B_HEADER=//div[contains(text(),'Blender 13B')][contains(@class,'renderer-true-default')]
+BLENDER13C_HEADER=//div[contains(text(),'Blender 13C')]
+BLENDER12B_HEADER=//div[contains(text(),'Blender 12B')][contains(@class,'renderer-true-default')]
+EXTRUDER13B_HEADER=//div[contains(text(),'Extruder 13B')][contains(@class,'renderer-true-default')]
+EXTRUDER13C_HEADER=//div[contains(text(),'Extruder 13C')]
+HAULOFF13_HEADER=//div[contains(text(),'Haul Off 13')]
+THERMOFORMER13_HEADER=//div[contains(text(),'Thermoformer 13')]
+TRIMPRESS13_HEADER=//div[contains(text(),'Trim Press 13')]

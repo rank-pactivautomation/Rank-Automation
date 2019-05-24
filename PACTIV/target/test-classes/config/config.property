@@ -1,0 +1,11 @@
+browser_name=chrome
+#browser_name=firefox
+#browser_name=edge
+#browser_name=safari
+#browser_name=ie
+
+
+#APPURL=https://bridgeviewfaiqa.pactiv.com:8443/Thingworx/FormLogin/Pactiv?eraseCache=true
+STAGURL=https://bridgeviewfaistaging.pactiv.com:8443/Thingworx/FormLogin/Pactiv?eraseCache=true
+APPURL=http://10.0.9.65:8080/Thingworx/FormLogin/Pactiv
+DMGURL=http://10.0.9.65:8080/Thingworx/FormLogin/Pactiv-DMG

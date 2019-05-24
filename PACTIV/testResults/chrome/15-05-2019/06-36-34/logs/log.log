@@ -1,0 +1,57 @@
+2019-05-15 06:36:35,068 [main] INFO com.pactiv.steps.BeforeAfterStepDefinition - In before step definition for scenario::Validate the correct number of shifts and the shift timings in which the plant operates as Floater
+2019-05-15 06:36:35,074 [main] INFO com.pactiv.utils.TestDataUtils - ===== Reading Feature Details====
+2019-05-15 06:36:35,075 [main] INFO com.pactiv.utils.TestDataUtils - Scenario::cucumber.runtime.ScenarioImpl@147e2ae7
+2019-05-15 06:36:35,075 [main] INFO com.pactiv.utils.TestDataUtils - Scenario name::Validate the correct number of shifts and the shift timings in which the plant operates as Floater
+2019-05-15 06:36:35,075 [main] INFO com.pactiv.utils.TestDataUtils - ****************
+2019-05-15 06:36:35,075 [main] INFO com.pactiv.utils.TestDataUtils - Scenario Name:Validate the correct number of shifts and the shift timings in which the plant operates as Floater
+2019-05-15 06:36:35,077 [main] INFO com.pactiv.utils.TestDataUtils - feature file Name:loginaction
+2019-05-15 06:36:35,077 [main] INFO com.pactiv.utils.TestDataUtils - ------------
+2019-05-15 06:36:35,077 [main] INFO com.pactiv.utils.TestDataUtils - Scenario_id:Validate the correct number of shifts and the shift timings in which the plant operates as Floater
+2019-05-15 06:36:36,044 [main] INFO com.pactiv.utils.TestDataUtils - SheetName is: LoginAction
+2019-05-15 06:36:36,079 [main] INFO com.pactiv.utils.TestDataUtils - Row is: 42Column is: 0
+2019-05-15 06:36:36,079 [main] INFO com.pactiv.utils.TestDataUtils - no of cells 1::4
+2019-05-15 06:36:36,082 [main] INFO com.pactiv.utils.TestDataUtils - header::[username, password, shift, ShiftTimings]
+2019-05-15 06:36:36,083 [main] INFO com.pactiv.utils.TestDataUtils - no of rows::4
+2019-05-15 06:36:36,083 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_1
+2019-05-15 06:36:36,083 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest1
+2019-05-15 06:36:36,084 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_1
+2019-05-15 06:36:36,085 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-15 06:36:36,085 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_1
+2019-05-15 06:36:36,085 [main] INFO com.pactiv.utils.TestDataUtils - value is ::2
+2019-05-15 06:36:36,085 [main] INFO com.pactiv.utils.TestDataUtils - key is ::ShiftTimings_1
+2019-05-15 06:36:36,086 [main] INFO com.pactiv.utils.TestDataUtils - value is ::5:30 to 17:30, 17:30 to 5:30
+2019-05-15 06:36:36,086 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_2
+2019-05-15 06:36:36,087 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest2
+2019-05-15 06:36:36,087 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_2
+2019-05-15 06:36:36,087 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-15 06:36:36,087 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_2
+2019-05-15 06:36:36,088 [main] INFO com.pactiv.utils.TestDataUtils - value is ::3
+2019-05-15 06:36:36,088 [main] INFO com.pactiv.utils.TestDataUtils - key is ::ShiftTimings_2
+2019-05-15 06:36:36,088 [main] INFO com.pactiv.utils.TestDataUtils - value is ::6:30 to 14:30, 14:30 to 22:30, 22:30 to 6:30
+2019-05-15 06:36:36,088 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_3
+2019-05-15 06:36:36,089 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest3
+2019-05-15 06:36:36,089 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_3
+2019-05-15 06:36:36,089 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-15 06:36:36,089 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_3
+2019-05-15 06:36:36,089 [main] INFO com.pactiv.utils.TestDataUtils - value is ::2
+2019-05-15 06:36:36,090 [main] INFO com.pactiv.utils.TestDataUtils - key is ::ShiftTimings_3
+2019-05-15 06:36:36,090 [main] INFO com.pactiv.utils.TestDataUtils - value is ::6:30 to 18:30, 18:30 to 6:30
+2019-05-15 06:36:36,090 [main] INFO com.pactiv.utils.TestDataUtils - key is ::username_4
+2019-05-15 06:36:36,090 [main] INFO com.pactiv.utils.TestDataUtils - value is ::FloaterTest4
+2019-05-15 06:36:36,090 [main] INFO com.pactiv.utils.TestDataUtils - key is ::password_4
+2019-05-15 06:36:36,091 [main] INFO com.pactiv.utils.TestDataUtils - value is ::test1234567890
+2019-05-15 06:36:36,091 [main] INFO com.pactiv.utils.TestDataUtils - key is ::shift_4
+2019-05-15 06:36:36,091 [main] INFO com.pactiv.utils.TestDataUtils - value is ::3
+2019-05-15 06:36:36,091 [main] INFO com.pactiv.utils.TestDataUtils - key is ::ShiftTimings_4
+2019-05-15 06:36:36,091 [main] INFO com.pactiv.utils.TestDataUtils - value is ::7:30 to 15:30, 15:30 to 23:30, 23:30 to 7:30
+2019-05-15 06:36:36,368 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-15 06:36:36,371 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-15 06:36:36,373 [main] INFO com.pactiv.config.DriverConfig - Setting up the driver::chrome
+2019-05-15 06:36:44,288 [main] INFO com.pactiv.utils.TestDataUtils - Access the PACTIV URL::PASS
+2019-05-15 06:36:44,291 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-userid')]
+2019-05-15 06:36:44,518 [main] INFO com.pactiv.utils.DriverUtilsImpl - In sendText():: Entering FloaterTest1 in By.xpath: //input[contains(@name,'thingworx-form-userid')]
+2019-05-15 06:36:44,825 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@name,'thingworx-form-password')]
+2019-05-15 06:36:45,254 [main] INFO com.pactiv.utils.DriverUtilsImpl - in gclick ::By.xpath: //input[contains(@value,'Submit')]
+2019-05-15 06:36:50,439 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-15 06:36:50,565 [main] INFO com.pactiv.utils.PropertyUtils - Property File Name is ::C:\Users\pzm6015\Documents\PACTIV\PACTIV\PACTIV\src\test\resources\properties\PactivLogin.property
+2019-05-15 06:36:54,654 [main] INFO com.pactiv.config.DriverConfig - Timings in App ::[[ChromeDriver: chrome on XP (27c5e5b853ebbabe42c55f55af397470)] -> xpath: //*[@data-start-time]]
