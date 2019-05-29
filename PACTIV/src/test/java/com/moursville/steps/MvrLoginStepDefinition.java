@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import com.pactiv.config.DriverConfig;
 import com.pactiv.exception.PactivException;
 import com.pactiv.pageobjects.PactivLogin;
+import com.pactiv.pageobjects.ProductionTracking;
 import com.pactiv.utils.DriverUtilsImpl;
 import com.pactiv.utils.LocalTestDataManager;
 import com.pactiv.utils.TestDataUtils;
@@ -23,6 +24,8 @@ public class MvrLoginStepDefinition extends TestDataUtils {
 	private static final Logger LOG = LoggerFactory.getLogger(DriverConfig.class);
 
 	TestResultsUtils testResultUtils = new TestResultsUtils();
+	PactivLogin PactivLogin = new PactivLogin();
+//	ProductionTracking ProductionTracking = new ProductionTracking();
 
 
 	@Given("^User launches the Moursville application$")

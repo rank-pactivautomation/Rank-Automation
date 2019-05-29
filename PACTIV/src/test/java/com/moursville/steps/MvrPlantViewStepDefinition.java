@@ -18,6 +18,7 @@ import com.pactiv.config.LocalDriverManager;
 import com.pactiv.exception.PactivException;
 import com.pactiv.pageobjects.MvrPlantView;
 import com.pactiv.pageobjects.PactivLogin;
+import com.pactiv.pageobjects.ProductionTracking;
 import com.pactiv.utils.DriverUtilsImpl;
 import com.pactiv.utils.LocalTestDataManager;
 import com.pactiv.utils.TestResultsUtils;
@@ -34,6 +35,8 @@ public class MvrPlantViewStepDefinition {
 	private static final Logger LOG = LoggerFactory.getLogger(DriverConfig.class);
 
 	TestResultsUtils testResultUtils = new TestResultsUtils();
+	PactivLogin PactivLogin = new PactivLogin();
+//	ProductionTracking ProductionTracking = new ProductionTracking();
 
 	/* Clicking on the Plant View Icon */
 	@Then("^User Verifies the PlantView icon$")

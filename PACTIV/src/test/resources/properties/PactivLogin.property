@@ -1,7 +1,6 @@
 USERNAME_FIELD=//input[contains(@name,'thingworx-form-userid')]
 PASSWORD_FIELD=//input[contains(@name,'thingworx-form-password')]
 SUBMIT_BUTTON=//input[contains(@value,'Submit')]
-
 ERROR_MESSAGE=//p[contains(text(),'Credentials do not match a valid username-password combination for this Organization. Try again.')]
 LOGOUT_BUTTON=//button[contains(@class,'button-element textsize-normal')]
 BRIDGEVIEW_TEXT=//span[contains(text(),'Bridgeview Plant View')]

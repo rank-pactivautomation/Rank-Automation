@@ -1,5 +1,5 @@
 LINELEVELREPORTS=//table[contains(@class, 'valuedisplay-wrapper')]//div[contains(text(),'Line Level Reports')]
-REPORTLOG_REVIEWSUBMIT=(//button[contains(text(),'Review & Submit')])
+REPORTLOG_REVIEWSUBMIT=(//button[contains(text(),'Review & Submit')])[1]
 REPORTLOG_SHIFTOEE=//div[contains(text(),'Shift OEE')]
 REPORTLOG_SHIFTOEEVALUE=(//table[contains(@class,'valuedisplay-wrapper')]//span)[1]
 REPORTLOG_CASESVALUE=//div[contains(@id,'valuedisplay-108')]//table//div[contains(@class,'renderer-true-default')]
@@ -35,3 +35,4 @@ CALENDAR_MONTHYEAR=(//th[contains(@class,'month-name')])[1]
 CALENDAR_DATE=//div[contains(@class,'day toMonth valid')]
 REPORT_CLOSE=(//input[contains(@class,'apply-btn')])[1]
 REPORT_NOREPORTS=//td[contains(text(),'No Reports to Show for this user')]
+REPORTLOG_ICON_DASHBOARD=//img[contains(@src, "Reports_logo")]

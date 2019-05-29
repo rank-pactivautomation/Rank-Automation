@@ -25,7 +25,8 @@ public class MvrHeaderIconStepDefinition extends TestDataUtils{
 	private static final Logger LOG = LoggerFactory.getLogger(DriverConfig.class);
 
 	TestResultsUtils testResultUtils = new TestResultsUtils();
-	
+	PactivLogin PactivLogin = new PactivLogin();
+	ProductionTracking ProductionTracking = new ProductionTracking();
 	/* Navigation to Production Tracking Screen by clicking on the icon */
 	
 	@Then("^User Clicks on  Moursville Production Tracking Icon for Floater$")

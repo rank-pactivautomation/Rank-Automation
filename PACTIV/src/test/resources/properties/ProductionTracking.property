@@ -1,5 +1,5 @@
 PRODUCTIONTRACKING_PENDING=//div[contains(@id,'cell_ShiftDataRepeater_Mashup')]//div[contains(text(),'pending')]
-PRODUCTIONTRACKING_ACTUALCASES=//div[contains(@class,'actual-case-val')]/input
+PRODUCTIONTRACKING_ACTUALCASES=//input[contains(@class,'actual-cases-input')]
 PRODUCTIONTRACKING_ADDDIAGNOSIS=//span[contains(text(),'Add Diagnosis')]
 PRODUCTIONTRACKING_DROPDOWN1=//div[contains(@class,'diagnosis-row')]//ul/li[1]
 PRODUCTIONTRACKING_SELECTROWS=//div[contains(@class,'diagnosis-row')]//span[contains(text(),'Select Rows')]
@@ -17,6 +17,19 @@ PRODUCTIONTRACKING_RESOLVETICK=(//span[contains(@class,'checkmark')])[1]
 PRODUCTIONTRACKING_RESOLVECOMMENT=(//div[contains(@class,'editor-container')]//input)[1]
 PRODUCTIONTRACKING_1ROW=//div[contains(@id,'rowSelectionPopup')]//ul//li[@class='1 selectable']/span
 PRODUCTIONTRACKING_2TROW=//div[contains(@id,'rowSelectionPopup')]//ul//li[@class='2T selectable']/span
+PRODCUTIONTRACK_ICON=//*[contains(@src, "ProductionTrack")]
+PRODUCTIONTRACK_TITLE=//*[@class='pTTitle'][contains(.,'Production Tracking')]
+PRODUCTIONTRACK_PENDING=//div[contains(@class,'shift-box')][contains(text(),'pending')]
+PRODUCTIONTRACK_GOLDENHOUR=//div[@class="golden-hour-val value"]
+PRODUCTIONTRACK_SAVE=//div[@class='popup-btn save-button']
+PRODUCTIONTRACK_TIMEDROPDOWN_CPT=shift-dd
+PRODUCTIONTRACK_DOWNTIME_L1_DRPDWN=l1-dd
+PRODUCTIONTRACK_DOWNTIME_L2_DRPDWN=l2-dd
+PRODUCTIONTRACK_DOWNTIME_L3_DRPDWN=l3-dd
+PRODUCTIONTRACK_SCRAPPEDROWS_DRPDWN=//div[contains(@class,'diagnosis-row')]//ul/li
+PRODUCTIONTRACK_SCRAPPEDROWS_DETAILS=//span[@class='diag-value'][contains(.,'Add Scrapping Details')]
+PRODUCTIONTRACK_SCRAPPEDROWS_DETAILS_TXTAREA=scrapped-rows-input
+PRODUCTIONTRACK_PTBOX_POPUP=productionTrackingPopup
 DOWNTIMEREASON_DROP_BY_CASES=//*[@cellvalue="Cases Lost'
 DOWNTIMEREASON_DROP=//*[@id="root_pagemashupcontainer-6_mashupcontainer-5_mashupcontainer-130_dhxlist-11"]/div/div[2]/div/div/img
 DOWNTIMEREASON_DROP_BY_CASES=//*[@cellvalue="Cases Lost'

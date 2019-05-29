@@ -29,6 +29,8 @@ public class MvrProductionTrackingStepDefinition extends TestDataUtils {
 	private static final Logger LOG = LoggerFactory.getLogger(DriverConfig.class);
 //    public static int count;
 	TestResultsUtils testResultUtils = new TestResultsUtils();
+	PactivLogin PactivLogin = new PactivLogin();
+	ProductionTracking ProductionTracking = new ProductionTracking();
 
 	@Then("^User selects the Moursville shift$")
 	public void user_selects_the_shift() throws Throwable {

@@ -17,7 +17,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import cucumber.api.java.en.Then;
 
-public class ShiftTimingsStep {
+public class ShiftTImingsStep {
 
 	/** The usablemethods. */
 	DriverUtilsImpl usablemethods = new DriverUtilsImpl();

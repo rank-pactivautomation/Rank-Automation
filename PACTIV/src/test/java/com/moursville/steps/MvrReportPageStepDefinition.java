@@ -13,6 +13,7 @@ import com.pactiv.config.DriverConfig;
 import com.pactiv.config.LocalDriverManager;
 import com.pactiv.exception.PactivException;
 import com.pactiv.pageobjects.PactivLogin;
+import com.pactiv.pageobjects.ProductionTracking;
 import com.pactiv.pageobjects.ReportLog;
 import com.pactiv.utils.DriverUtilsImpl;
 import com.pactiv.utils.TestResultsUtils;
@@ -36,6 +37,8 @@ public class MvrReportPageStepDefinition {
 	private static final Logger LOG = LoggerFactory.getLogger(DriverConfig.class);
 
 	TestResultsUtils testResultUtils = new TestResultsUtils();
+	PactivLogin PactivLogin = new PactivLogin();
+	ProductionTracking ProductionTracking = new ProductionTracking();
 	private String strDate;
 
 	public static String floater_text = null;

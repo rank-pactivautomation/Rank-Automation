@@ -6,6 +6,7 @@ import com.pactiv.config.DriverConfig;
 import com.pactiv.pageobjects.MvrMaterialControl;
 import com.pactiv.pageobjects.MvrNotifications;
 import com.pactiv.pageobjects.PactivLogin;
+import com.pactiv.pageobjects.ProductionTracking;
 import com.pactiv.utils.DriverUtilsImpl;
 import com.pactiv.utils.TestResultsUtils;
 import com.relevantcodes.extentreports.LogStatus;
@@ -18,6 +19,9 @@ public class MvrNotificationsStefDefinition {
 	private static final Logger LOG = LoggerFactory.getLogger(DriverConfig.class);
 
 	TestResultsUtils testResultUtils = new TestResultsUtils();
+	PactivLogin PactivLogin = new PactivLogin();
+//	ProductionTracking ProductionTracking = new ProductionTracking();
+	
 	@Then("^User navigates to the Notifications page$")
 	public void user_navigates_to_the_Notifications_page() throws Throwable {
 		Thread.sleep(5000);

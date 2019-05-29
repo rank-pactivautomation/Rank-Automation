@@ -23,6 +23,8 @@ public class MvrEOLScreenStepdefinition {
 	DriverUtilsImpl usablemethods = new DriverUtilsImpl();
 	/** The logger. */
 	private static final Logger LOG = LoggerFactory.getLogger(DriverConfig.class);
+	PactivLogin PactivLogin = new PactivLogin();
+	ProductionTracking ProductionTracking = new ProductionTracking();
 
 	TestResultsUtils testResultUtils = new TestResultsUtils();
 	@Then("^User Verifies the Text on EOL Screen$")

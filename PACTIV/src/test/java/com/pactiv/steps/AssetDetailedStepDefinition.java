@@ -28,6 +28,7 @@ public class AssetDetailedStepDefinition extends TestDataUtils {
 	private static final Logger LOG = LoggerFactory.getLogger(DriverConfig.class);
 
 	TestResultsUtils testResultUtils = new TestResultsUtils();
+	PactivLogin PactivLogin = new PactivLogin();
 
 	@When("^User Clicks on expand icon for asset abridged view$")
 	public void user_Clicks_on_expand_icon_for_asset_abridged_view() throws Throwable {

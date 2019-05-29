@@ -46,10 +46,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.codoid.products.exception.FilloException;
-import com.codoid.products.fillo.Connection;
-import com.codoid.products.fillo.Fillo;
-import com.codoid.products.fillo.Recordset;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import com.pactiv.config.LocalDriverManager;
@@ -78,14 +74,14 @@ public class TestDataUtils extends SeleniumNGSuite {
 
 	DCTUtils dc = new DCTUtils();
 	DriverUtilsImpl usablemethods = new DriverUtilsImpl();
-	public static LinkedHashMap<String, String> hmap = new LinkedHashMap<String, String>();
+//	public static LinkedHashMap<String, String> hmap = new LinkedHashMap<String, String>();
 	public static HashMap<String, String> hmap3 = new HashMap<String, String>();
-	public static int flag = 0;
+//	public static int flag = 0;
 	public static List<String> valueStored = new ArrayList<String>();
 	public static List<String> valueList = new ArrayList<String>();
-	public static int flagValue;
-	static boolean launchBrowser = false;
-	static int fileCount = 0;
+//	public static int flagValue;
+//	static boolean launchBrowser = false;
+//	static int fileCount = 0;
 
 	public static PropertyUtils configprops = new PropertyUtils(baseProjectPath.concat(Constants.CONFIG_PROPERTY));
 	/** The urlNew. */
@@ -161,15 +157,13 @@ public class TestDataUtils extends SeleniumNGSuite {
 	 * @throws PactivException
 	 * @throws IOException     the IOException
 	 */
-	public boolean LaunchApp() throws PactivException {
+	public void LaunchApp() throws PactivException {
 		try {
-	
 			SeleniumNGSuite seleniumObj = new SeleniumNGSuite();
 //			if (launchBrowser) {
-				seleniumObj.setUpSuite(readDataToExecute("ExecutionConfiguration"));
+			seleniumObj.setUpSuite(readDataToExecute("ExecutionConfiguration"));
 
 //			}
-		
 
 		} catch (Exception exception) {
 			{
@@ -192,7 +186,33 @@ public class TestDataUtils extends SeleniumNGSuite {
 
 			}
 		}
-		return launchBrowser;
+//		return launchBrowser;
+	}
+
+	public void LaunchApp(String url) throws PactivException {
+		try {
+			SeleniumNGSuite seleniumObj = new SeleniumNGSuite();
+			url = configprops.getProperty(url);
+			if (url.equals("")) {
+				seleniumObj.setUpSuite(readDataToExecute("ExecutionConfiguration"));
+			} else
+				seleniumObj.setUpSuite(url);
+
+			LOG.info("Access the PACTIV URL::PASS");
+
+		} catch (Exception exception) {
+			LOG.error("Access the PACTIV URL::FAIL::{}", exception.getMessage());
+			String homescreenshot = usablemethods.takescreenshot("home page");
+			TestResultsUtils.logger.log(LogStatus.FAIL, "Application launch failed",
+					TestResultsUtils.logger.addBase64ScreenShot(homescreenshot));
+
+		} catch (Throwable throwable) {
+			throwable.printStackTrace();
+			LOG.error("Access the PACTIV URL::FAIL::{}", throwable.getMessage());
+			String homescreenshot = usablemethods.takescreenshot("home page");
+			TestResultsUtils.logger.log(LogStatus.FAIL, "Application launch failed",
+					TestResultsUtils.logger.addBase64ScreenShot(homescreenshot));
+		}
 	}
 
 	/**
@@ -203,15 +223,18 @@ public class TestDataUtils extends SeleniumNGSuite {
 	 * @throws IOException     the IOException
 	 */
 	public void Logout() throws PactivException {
+		PactivLogin PactivLogin = new PactivLogin();
 		try {
-			usablemethods.gClick(PactivLogin.logout_button);
-			TestResultsUtils.logger.log(LogStatus.PASS, "User is able to click on logout button");
-		} catch (Exception exception) {
-			if (launchBrowser) {
-				String homescreenshot = usablemethods.takescreenshot("home page");
-				TestResultsUtils.logger.log(LogStatus.FAIL, "User is NOT able to click on logout button",
-						TestResultsUtils.logger.addBase64ScreenShot(homescreenshot));
+			if (usablemethods.isElementPresentAndDisplayed(PactivLogin.logout_button)) {
+				usablemethods.gClick(PactivLogin.logout_button);
+				TestResultsUtils.logger.log(LogStatus.PASS, "User is able to click on logout button");
 			}
+		} catch (Exception exception) {
+//			if (launchBrowser) {
+			String homescreenshot = usablemethods.takescreenshot("home page");
+			TestResultsUtils.logger.log(LogStatus.FAIL, "User is NOT able to click on logout button",
+					TestResultsUtils.logger.addBase64ScreenShot(homescreenshot));
+//			}
 		}
 	}
 
@@ -445,7 +468,7 @@ public class TestDataUtils extends SeleniumNGSuite {
 	 * @param scenario the scenario
 	 * @throws Throwable the throwable
 	 */
-	public boolean readConfigTestData(Scenario scenario) throws Throwable {
+	public void readConfigTestData(Scenario scenario) throws Throwable {
 		LOG.info("===== Reading Feature Details====");
 		LOG.info("Scenario::{}", scenario);
 		LOG.info("Scenario name::{}", scenario.getName());
@@ -454,7 +477,7 @@ public class TestDataUtils extends SeleniumNGSuite {
 		LOG.info("****************");
 		LOG.info("Scenario Name:" + scenarioName);
 		readExcel("Execution_Configuration", scenarioName);
-		return launchBrowser;
+//		return launchBrowser;
 	}
 
 	/**
@@ -551,13 +574,13 @@ public class TestDataUtils extends SeleniumNGSuite {
 						if (row.getCell(7).toString().equalsIgnoreCase("Yes")) {
 							list4.add(ProcessSheet.getRow(row.getCell(5).getRowIndex()).getCell(6).toString());
 						}
-						
+
+					}
 				}
-			}
 				for (String str : list4) {
 					readFromFile("LoginAction", str);
 				}
-				}
+			}
 		}
 	}
 
@@ -569,30 +592,12 @@ public class TestDataUtils extends SeleniumNGSuite {
 	 *
 	 *
 	 */
-
 	public static Map<String, String> getTestDataInMap(String testDataFile, String sheetName,
 			String AutomationTestScriptName) throws Exception {
 		Map<String, String> TestDataInMap = new TreeMap<String, String>();
 		String query = null;
 		query = String.format("SELECT * FROM %s WHERE Execute='Yes' and AutomationTestScriptName='%s'", sheetName,
 				AutomationTestScriptName);
-		Fillo fillo = new Fillo();
-		Connection conn = null;
-		Recordset recordset = null;
-		try {
-			conn = fillo.getConnection(testDataFile);
-			recordset = conn.executeQuery(query);
-			while (recordset.next()) {
-				for (String field : recordset.getFieldNames()) {
-					TestDataInMap.put(field, recordset.getField(field));
-				}
-			}
-
-		} catch (FilloException e) {
-			e.printStackTrace();
-			throw new Exception("Test data cannot find...");
-		}
-		conn.close();
 		return TestDataInMap;
 
 	}
@@ -604,8 +609,8 @@ public class TestDataUtils extends SeleniumNGSuite {
 	 * @throws Throwable the throwable
 	 */
 
-	@SuppressWarnings("deprecation")
 	public String readDataToExecute(String fileName) throws Throwable {
+		String url = "APPURL";
 		try {
 			String Project_Name = "";
 			String Environment_Name = "";
@@ -654,12 +659,16 @@ public class TestDataUtils extends SeleniumNGSuite {
 									Project_Name = str;
 									System.out.println(Project_Name);
 									break;
+								} else if (str.equalsIgnoreCase("CPT_DMG")) {
+									Project_Name = str;
+									System.out.println(Project_Name);
+									break;
 								}
 								break;
 							}
 						}
 
-						if (cell.getColumnIndex() == 8) {
+						if (cell.getColumnIndex() == 9) {
 							list2.add(cell.getStringCellValue());
 							System.out.println(list2);
 							for (String str : list2) {
@@ -673,7 +682,7 @@ public class TestDataUtils extends SeleniumNGSuite {
 									break;
 								}
 							}
-							if (cell.getColumnIndex() == 9) {
+							if (cell.getColumnIndex() == 10) {
 								list3.add(cell.getStringCellValue());
 								for (String str : list3) {
 									if (str.equalsIgnoreCase("Chrome")) {
@@ -686,12 +695,8 @@ public class TestDataUtils extends SeleniumNGSuite {
 								}
 							}
 							String Project = Project_Name.concat("_").concat(Environment_Name);
-							if (mooresville_qa.equalsIgnoreCase(Project)) {
-								configprops.getProperty(Constants.MOORESVILLE_QA);
-							} else if (mooresville_staging.equalsIgnoreCase(Project)) {
-								configprops.getProperty(Constants.MOORESVILLE_STAGING);
-							}
-							if (Constants.CHROME.equalsIgnoreCase(Browser_Name)) {
+							url = configprops.getProperty(Project);
+							if (Constants.CHROME.equalsIgnoreCase(Browser_Name.toLowerCase())) {
 								browser = configprops.getProperty(browserType);
 							}
 
@@ -711,7 +716,7 @@ public class TestDataUtils extends SeleniumNGSuite {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return urlNew;
+		return url;
 	}
 
 	/**
@@ -722,7 +727,7 @@ public class TestDataUtils extends SeleniumNGSuite {
 	 * @throws Throwable the throwable
 	 */
 	public void readFromFile(String featureName, String scenarioName) throws Throwable {
-		fileCount++;
+//		fileCount++;
 		LocalTestDataManager.setScenarioID(scenarioName.split(Constants.COLON)[0]);
 		LOG.info("------------");
 		LOG.info("Scenario_id:" + LocalTestDataManager.getScenarioID());
@@ -732,11 +737,12 @@ public class TestDataUtils extends SeleniumNGSuite {
 		int numberofrows = 0;
 		boolean scenariofound = false;
 		DataFormatter formatter = new DataFormatter();
-		List<String> flag=new ArrayList<String>();
-		List<String> username=new ArrayList<String>();
-		List<String> password=new ArrayList<String>();
+//		List<String> flag = new ArrayList<String>();
+//		List<String> username = new ArrayList<String>();
+//		List<String> password = new ArrayList<String>();
 		ArrayList<String> header = new ArrayList<String>();
-		String filepath = baseProjectPath.concat(Constants.CONFIG_TEST_DATA_PATH);
+//		String filepath = baseProjectPath.concat(Constants.CONFIG_TEST_DATA_PATH);
+		String filepath = baseProjectPath.concat(Constants.TEST_DATA_PATH);
 		FileInputStream inputstream = new FileInputStream(new File(filepath));
 		@SuppressWarnings("resource")
 		Workbook workbook = new XSSFWorkbook(inputstream);
@@ -765,7 +771,7 @@ public class TestDataUtils extends SeleniumNGSuite {
 				}
 			}
 		}
-		launchBrowser = false;
+//		launchBrowser = false;
 		if (scenariofound == true) {
 			Row row = firstsheet.getRow(rowNum);
 			for (int p = 0; p < numberofcells; p++) {
@@ -788,29 +794,18 @@ public class TestDataUtils extends SeleniumNGSuite {
 		String key;
 		String value;
 		int count = 1;
-
-		for (int b = 1; b <= numberofrows; b++)
-
-		{
-			HashMap<String, String> hmap1 = new HashMap<String, String>();
+		HashMap<String, String> hmap = new HashMap<String, String>();
+		for (int b = 1; b <= numberofrows; b++) {
 			for (int c = 0; c < numberofcells; c++) {
-				if (fileCount == count) {
-					key = header.get(c).concat(Constants.UNDERSCORE + count);
-					LOG.info("key is ::" + key);
-					value = formatter.formatCellValue(firstsheet.getRow(rowNum).getCell(c));
+//				if (fileCount == count) {
+				key = header.get(c).concat(Constants.UNDERSCORE + count);
+				LOG.info("key is ::" + key);
+				value = formatter.formatCellValue(firstsheet.getRow(rowNum).getCell(c));
 
-					LOG.info("value is ::" + value);
-					hmap1.put(key, value);
-					
-					for (Map.Entry<String, String> entry : hmap1.entrySet()) {
-						if (entry.getValue().equalsIgnoreCase("Yes")) {
-							hmap.putAll(hmap1);
-							valueStored.add("Yes");
-							// hmap.put(entry.getKey(), entry.getValue());
-							launchBrowser = true;
-						}
-					}
-				}
+				LOG.info("value is ::" + value);
+				hmap.put(key, value);
+
+//				}
 			}
 			count++;
 			rowNum++;
@@ -827,5 +822,5 @@ public class TestDataUtils extends SeleniumNGSuite {
 	public static String getCurrentScenarioID() {
 		return LocalTestDataManager.getScenarioID();
 	}
-	
+
 }

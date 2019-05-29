@@ -21,6 +21,7 @@ public class PactivException extends Exception {
 	 */
 	public PactivException() {
 		super();
+		LOG.info("Exception");
 	}
 
 	/**
@@ -32,6 +33,7 @@ public class PactivException extends Exception {
 	public PactivException(String message) {
 		super(message);
 		this.message = message;
+		LOG.error(message);
 	}
 
 	/**
@@ -42,6 +44,8 @@ public class PactivException extends Exception {
 	 */
 	public PactivException(Throwable cause) {
 		super(cause);
+		cause.printStackTrace();
+		LOG.error(cause.getMessage());
 	}
 
 	/*
@@ -51,6 +55,7 @@ public class PactivException extends Exception {
 	 */
 	@Override
 	public String toString() {
+		LOG.error(message);
 		return message;
 	}
 
@@ -61,6 +66,7 @@ public class PactivException extends Exception {
 	 */
 	@Override
 	public String getMessage() {
+		LOG.error(message);
 		return message;
 	}
 }

@@ -22,6 +22,7 @@ public class UserProfileStepDefinition extends TestDataUtils {
 	private static final Logger LOG = LoggerFactory.getLogger(DriverConfig.class);
 
 	TestResultsUtils testResultUtils = new TestResultsUtils();
+	PactivLogin PactivLogin = new PactivLogin();
 
 	@When("^User Clicks on User Profile button$")
 	public void user_Clicks_on_User_Profile_button() throws Throwable {

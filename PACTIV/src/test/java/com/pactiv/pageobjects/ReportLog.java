@@ -14,21 +14,22 @@ public class ReportLog {
 	public static By reportlog_shiftoee = By.xpath(repository.getProperty("REPORTLOG_SHIFTOEE"));
 	public static By reportlog_shiftoeevalue = By.xpath(repository.getProperty("REPORTLOG_SHIFTOEEVALUE"));
 	public static By reportlog_casesvalue = By.xpath(repository.getProperty("REPORTLOG_CASESVALUE"));
-	public static By reportlog_cases = By.xpath(repository.getProperty("REPORTLOG_CASESPRODUCED"));
+	public static By reportlog_cases = By.xpath(repository.getProperty("REPORTLOG_CASESVALUE"));
 	public static By reportlog_downtimevalue = By.xpath(repository.getProperty("REPORTLOG_DOWNTIMEVALUE"));
 	public static By reportlog_downtime = By.xpath(repository.getProperty("REPORTLOG_DOWNTIME"));
 	public static By reportpage_date = By.xpath(repository.getProperty("REPORTPAGE_DATE"));
 	public static By reportlog_incomplete = By.xpath(repository.getProperty("REPORTLOG_INCOMPLETE"));
 	public static By reportlog_submit = By.xpath(repository.getProperty("REPORTLOG_SUBMITBUTTON"));
-	public static By reportlog_reviewsubmit_incomplete= By.xpath(repository.getProperty("REPORTLOG_REVIEWSUBMIT_INCOMPLETE"));
-	public static By reportlog_actualcases_value= By.xpath(repository.getProperty("REPORTLOG_ACTUALCASES_VALUE"));
-	public static By reportlog_adddiagnosis= By.xpath(repository.getProperty("REPORTLOG_ADDDIAGNOSIS"));
-	public static By reportlog_selectlevel1= By.xpath(repository.getProperty("REPORTLOG_SELECTLEVEL1"));
-	public static By reportlog_selectlevel2= By.xpath(repository.getProperty("REPORTLOG_SELECTLEVEL2"));
-	public static By reportlog_selectlevel3= By.xpath(repository.getProperty("REPORTLOG_SELECTLEVEL3"));
-	public static By reportlog_save= By.xpath(repository.getProperty("REPORTLOG_SAVE"));
+	public static By reportlog_reviewsubmit_incomplete = By
+			.xpath(repository.getProperty("REPORTLOG_REVIEWSUBMIT_INCOMPLETE"));
+	public static By reportlog_actualcases_value = By.xpath(repository.getProperty("REPORTLOG_ACTUALCASES_VALUE"));
+	public static By reportlog_adddiagnosis = By.xpath(repository.getProperty("REPORTLOG_ADDDIAGNOSIS"));
+	public static By reportlog_selectlevel1 = By.xpath(repository.getProperty("REPORTLOG_SELECTLEVEL1"));
+	public static By reportlog_selectlevel2 = By.xpath(repository.getProperty("REPORTLOG_SELECTLEVEL2"));
+	public static By reportlog_selectlevel3 = By.xpath(repository.getProperty("REPORTLOG_SELECTLEVEL3"));
+	public static By reportlog_save = By.xpath(repository.getProperty("REPORTLOG_SAVE"));
 	public static By supervisor_submit = By.xpath(repository.getProperty("SUPERVISOR_SUBMIT"));
-	public static By supervisor_report_icon = By.xpath(repository.getProperty("REPORT_ICON_SUPERVISOR")); 
+	public static By supervisor_report_icon = By.xpath(repository.getProperty("REPORT_ICON_SUPERVISOR"));
 	public static By supervisor_confirm_submit = By.xpath(repository.getProperty("CONFIRM_SUBMIT_SUPERVISOR"));
 	public static By floater_noreports = By.xpath(repository.getProperty("FLOATER_NOREPORTS"));
 	public static By reviewsubmit_floater = By.xpath(repository.getProperty("REPORTLOG_REVIEWSUBMIT_FLOATER"));
@@ -45,8 +46,6 @@ public class ReportLog {
 	public static By claendar_previous = By.xpath(repository.getProperty("CALENDAR_PREVIOUS"));
 	public static By report_noreports = By.xpath(repository.getProperty("REPORT_NOREPORTS"));
 	public static By claendar_close = By.xpath(repository.getProperty("REPORT_CLOSE"));
+	public final By reportLogIconDashboard = By.xpath(repository.getProperty("REPORTLOG_ICON_DASHBOARD"));
 
-	 
-	 
-	 
 }

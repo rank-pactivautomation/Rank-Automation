@@ -24,6 +24,7 @@ public class ReportPageStepDefinition {
 	private static final Logger LOG = LoggerFactory.getLogger(DriverConfig.class);
 
 	TestResultsUtils testResultUtils = new TestResultsUtils();
+	PactivLogin PactivLogin = new PactivLogin();
 
 	@Then("^User verify the Line Level Reports Title on Report Page$")
 	public void user_verify_the_Line_Level_Reports_Title_on_Report_Page() throws Throwable {

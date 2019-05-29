@@ -25,6 +25,7 @@ public class ControlTowerStepDefinition extends TestDataUtils {
 	private static final Logger LOG = LoggerFactory.getLogger(DriverConfig.class);
 
 	TestResultsUtils testResultUtils = new TestResultsUtils();
+	PactivLogin PactivLogin = new PactivLogin();
 
 	@Then("^User Clicks on Control Tower Icon$")
 	public void user_Clicks_on_Control_Tower_Icon() throws Throwable {

@@ -27,7 +27,7 @@ public class PlantViewStepDefinition extends TestDataUtils{
 	private static final Logger LOG = LoggerFactory.getLogger(DriverConfig.class);
 
 	TestResultsUtils testResultUtils = new TestResultsUtils();
-	
+	PactivLogin PactivLogin = new PactivLogin();
 
 	@And("^User Verify the asset dot and asset for the line$")
 	public void user_Verify_the_asset_dot_and_asset_for_the_line() throws Throwable {
